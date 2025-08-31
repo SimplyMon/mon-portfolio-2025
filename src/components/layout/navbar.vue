@@ -32,13 +32,16 @@
         </router-link>
 
         <!-- Center Logo -->
-        <div class="flex items-center px-1 sm:px-4 flex-shrink-0">
+        <router-link
+          to="/"
+          class="flex items-center px-1 sm:px-4 flex-shrink-0"
+        >
           <img
             src="../../assets/images/logo.png"
             alt="Logo"
             class="w-6 sm:w-20 object-contain"
           />
-        </div>
+        </router-link>
 
         <!-- Right Links -->
         <router-link

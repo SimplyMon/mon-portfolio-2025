@@ -2,14 +2,12 @@
   <div
     class="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-4"
   >
-    <!-- Floating & wiggling 404 -->
     <h1
       class="text-6xl md:text-8xl font-extrabold mb-4 text-orange-400 animate-wiggle"
     >
       404
     </h1>
 
-    <!-- Fun waiting cartoon GIF -->
     <div class="mb-6">
       <img
         src="../../assets/images/egg1.gif"
@@ -18,20 +16,17 @@
       />
     </div>
 
-    <!-- Work in progress message -->
     <p class="text-xl md:text-2xl mb-6 text-orange-300 text-center">
       This page is currently under
       <span class="font-semibold">work in progress</span>.
     </p>
 
-    <!-- Animated loading dots -->
     <div class="flex space-x-3 mb-6">
       <span class="w-4 h-4 bg-orange-500 rounded-full animate-wait1"></span>
       <span class="w-4 h-4 bg-orange-500 rounded-full animate-wait2"></span>
       <span class="w-4 h-4 bg-orange-500 rounded-full animate-wait3"></span>
     </div>
 
-    <!-- Go back home -->
     <router-link
       to="/"
       class="px-6 py-3 bg-orange-500 hover:bg-orange-600 rounded-lg font-semibold transition"
@@ -48,7 +43,6 @@ export default {
 </script>
 
 <style scoped>
-/* Wiggle animation for the 404 */
 @keyframes wiggle {
   0%,
   100% {
@@ -63,7 +57,6 @@ export default {
   animation: wiggle 2s ease-in-out infinite;
 }
 
-/* Loading dots animations */
 @keyframes wait1 {
   0%,
   80%,
@@ -113,7 +106,6 @@ export default {
   animation-delay: 0.4s;
 }
 
-/* Slow bounce animation for GIF */
 @keyframes bounce-slow {
   0%,
   100% {
