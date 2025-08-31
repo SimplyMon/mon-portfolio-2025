@@ -1,32 +1,75 @@
+<script setup>
+import { ref, onMounted, onUnmounted } from "vue";
+
+const isShrunk = ref(false);
+let lastScroll = 0;
+
+const handleScroll = () => {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScroll && currentScroll > 50) {
+    // Scrolling down
+    isShrunk.value = true;
+  } else if (currentScroll < lastScroll) {
+    // Scrolling up
+    isShrunk.value = false;
+  }
+
+  lastScroll = currentScroll;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
+</script>
+
 <template>
-  <nav class="fixed w-full z-50 bottom-8 md:bottom-auto md:top-0">
-    <div
-      class="max-w-6xl mx-auto flex justify-center pt-2 md:pt-5 px-2 sm:px-4"
-    >
+  <nav
+    class="fixed w-full z-50 bottom-8 md:bottom-auto md:top-0 transition-all duration-300"
+    :class="{
+      'py-1 md:py-1.5': isShrunk,
+      'py-5 md:py-5': !isShrunk,
+    }"
+  >
+    <div class="max-w-6xl mx-auto flex justify-center px-2 sm:px-4">
       <div
-        class="flex flex-nowrap items-center justify-center gap-1.5 sm:gap-3.5 px-1 sm:px-3.5 py-1.5 border-3 border-white/20 rounded-full backdrop-blur-lg shadow-lg whitespace-nowrap"
+        class="flex flex-nowrap items-center justify-center gap-1.5 sm:gap-3.5 px-1 sm:px-3.5 py-1.5 border-3 border-white/20 rounded-full backdrop-blur-lg shadow-lg whitespace-nowrap transition-all duration-300"
+        :class="{
+          'gap-1 sm:gap-2': isShrunk,
+          'gap-1.5 sm:gap-3.5': !isShrunk,
+        }"
       >
         <!-- Left Links -->
         <router-link
           to="/"
-          class="flex items-center justify-center h-8 sm:h-10 px-1 sm:px-5 text-xs sm:text-base rounded-full transition duration-300 flex-shrink-0 w-16 sm:w-28"
-          :class="
+          class="flex items-center justify-center text-xs sm:text-base rounded-full transition-all duration-300 flex-shrink-0"
+          :class="[
             $route.path === '/'
               ? 'bg-gradient-to-r from-[#FD6F00] to-orange-400 text-white shadow-md'
-              : 'text-gray-200 hover:text-[#FD6F00]'
-          "
+              : 'text-gray-200 hover:text-[#FD6F00]',
+            isShrunk
+              ? 'h-6 sm:h-8 w-16 sm:w-24 px-1 sm:px-3'
+              : 'h-8 sm:h-10 w-16 sm:w-28 px-1 sm:px-5',
+          ]"
         >
           Home
         </router-link>
 
         <router-link
           to="/case-study"
-          class="flex items-center justify-center h-8 sm:h-10 px-1 sm:px-5 text-xs sm:text-base rounded-full transition duration-300 flex-shrink-0 w-16 sm:w-28"
-          :class="
+          class="flex items-center justify-center text-xs sm:text-base rounded-full transition-all duration-300 flex-shrink-0"
+          :class="[
             $route.path === '/case-study'
               ? 'bg-gradient-to-r from-[#FD6F00] to-orange-400 text-white shadow-md'
-              : 'text-gray-200 hover:text-[#FD6F00]'
-          "
+              : 'text-gray-200 hover:text-[#FD6F00]',
+            isShrunk
+              ? 'h-6 sm:h-8 w-16 sm:w-24 px-1 sm:px-3'
+              : 'h-8 sm:h-10 w-16 sm:w-28 px-1 sm:px-5',
+          ]"
         >
           Case Study
         </router-link>
@@ -34,36 +77,46 @@
         <!-- Center Logo -->
         <router-link
           to="/"
-          class="flex items-center px-1 sm:px-4 flex-shrink-0"
+          class="flex items-center flex-shrink-0 transition-all duration-300"
         >
           <img
             src="../../assets/images/logo.png"
             alt="Logo"
-            class="w-6 sm:w-20 object-contain"
+            class="object-contain transition-all duration-300 mx-4"
+            :class="{
+              'w-6 sm:w-12': isShrunk,
+              'w-6 sm:w-20': !isShrunk,
+            }"
           />
         </router-link>
 
         <!-- Right Links -->
         <router-link
           to="/resume"
-          class="flex items-center justify-center h-8 sm:h-10 px-1 sm:px-5 text-xs sm:text-base rounded-full transition duration-300 flex-shrink-0 w-16 sm:w-28"
-          :class="
+          class="flex items-center justify-center text-xs sm:text-base rounded-full transition-all duration-300 flex-shrink-0"
+          :class="[
             $route.path === '/resume'
               ? 'bg-gradient-to-r from-[#FD6F00] to-orange-400 text-white shadow-md'
-              : 'text-gray-200 hover:text-[#FD6F00]'
-          "
+              : 'text-gray-200 hover:text-[#FD6F00]',
+            isShrunk
+              ? 'h-6 sm:h-8 w-16 sm:w-24 px-1 sm:px-3'
+              : 'h-8 sm:h-10 w-16 sm:w-28 px-1 sm:px-5',
+          ]"
         >
           Resume
         </router-link>
 
         <router-link
           to="/contacts"
-          class="flex items-center justify-center h-8 sm:h-10 px-1 sm:px-5 text-xs sm:text-base rounded-full transition duration-300 flex-shrink-0 w-16 sm:w-28"
-          :class="
+          class="flex items-center justify-center text-xs sm:text-base rounded-full transition-all duration-300 flex-shrink-0"
+          :class="[
             $route.path === '/contacts'
               ? 'bg-gradient-to-r from-[#FD6F00] to-orange-400 text-white shadow-md'
-              : 'text-gray-200 hover:text-[#FD6F00]'
-          "
+              : 'text-gray-200 hover:text-[#FD6F00]',
+            isShrunk
+              ? 'h-6 sm:h-8 w-16 sm:w-24 px-1 sm:px-3'
+              : 'h-8 sm:h-10 w-16 sm:w-28 px-1 sm:px-5',
+          ]"
         >
           Contacts
         </router-link>
