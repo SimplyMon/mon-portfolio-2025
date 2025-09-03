@@ -10,10 +10,15 @@
           class="relative flex-shrink-0 flex justify-center md:justify-start"
           key="image"
         >
-          <img
+          <!-- <img
             src="../../assets/images/hero.png"
             alt="Profile"
             class="relative w-56 h-56 md:w-auto md:h-80 rounded-full object-cover shadow-lg"
+          /> -->
+          <img
+            src="../../assets/images/hero.png"
+            alt="Profile"
+            class="relative w-52 sm:w-56 md:w-80 h-auto rounded-full object-cover shadow-lg"
           />
         </div>
       </transition>

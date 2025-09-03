@@ -8,17 +8,23 @@
         <!-- Logo / Brand -->
         <div class="text-center md:text-left">
           <h2 class="text-xl font-bold text-white">MON DEV</h2>
-          <p class="mt-2 text-sm text-gray-400">Building awesome web apps 🚀</p>
+          <p class="mt-2 text-sm text-gray-400">Building Web Applications</p>
         </div>
 
         <!-- Navigation Links -->
         <div class="flex space-x-6">
-          <a href="#" class="hover:text-white">Home</a>
-          <router-link to="/about">
-            <a href="#" class="hover:text-white">About</a>
+          <router-link to="/">
+            <a href="#" class="hover:text-white">Home</a>
           </router-link>
-          <a href="#" class="hover:text-white">Services</a>
-          <a href="#" class="hover:text-white">Contact</a>
+          <router-link to="/case-study">
+            <a href="#" class="hover:text-white">Case Study</a>
+          </router-link>
+          <router-link to="/resume">
+            <a href="#" class="hover:text-white">Resume</a>
+          </router-link>
+          <router-link to="/contacts">
+            <a href="#" class="hover:text-white">Contacts</a>
+          </router-link>
         </div>
 
         <!-- Social Icons -->

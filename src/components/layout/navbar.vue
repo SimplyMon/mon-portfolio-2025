@@ -1,32 +1,3 @@
-<script setup>
-import { ref, onMounted, onUnmounted } from "vue";
-
-const isShrunk = ref(false);
-let lastScroll = 0;
-
-const handleScroll = () => {
-  const currentScroll = window.scrollY;
-
-  if (currentScroll > lastScroll && currentScroll > 50) {
-    // Scrolling down
-    isShrunk.value = true;
-  } else if (currentScroll < lastScroll) {
-    // Scrolling up
-    isShrunk.value = false;
-  }
-
-  lastScroll = currentScroll;
-};
-
-onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
-});
-
-onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
-});
-</script>
-
 <template>
   <nav
     class="fixed w-full z-50 bottom-8 md:bottom-auto md:top-0 transition-all duration-300"
@@ -124,3 +95,32 @@ onUnmounted(() => {
     </div>
   </nav>
 </template>
+
+<script setup>
+import { ref, onMounted, onUnmounted } from "vue";
+
+const isShrunk = ref(false);
+let lastScroll = 0;
+
+const handleScroll = () => {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScroll && currentScroll > 50) {
+    // Scrolling down
+    isShrunk.value = true;
+  } else if (currentScroll < lastScroll) {
+    // Scrolling up
+    isShrunk.value = false;
+  }
+
+  lastScroll = currentScroll;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
+</script>
