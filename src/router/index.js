@@ -1,8 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import homeScreen from "@/components/screens/home.vue";
-
-// NOT FOUND SCREEN
 import notFoundScreen from "@/components/layout/NotFound.vue";
 
 const routes = [
@@ -11,8 +9,6 @@ const routes = [
     name: "Home",
     component: homeScreen,
   },
-
-  // route (404)
   {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
@@ -23,6 +19,9 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+  scrollBehavior() {
+    return { top: 0, behavior: "smooth" };
+  },
 });
 
 export default router;
