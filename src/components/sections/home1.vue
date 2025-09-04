@@ -61,10 +61,12 @@
       </div>
     </div>
   </section>
+  <NotFound />
 </template>
 
 <script setup>
 import { ref } from "vue";
+import NotFound from "../layout/NotFound.vue";
 
 // languages
 import phpLogo from "@/assets/images/tech/php-plain.png";
