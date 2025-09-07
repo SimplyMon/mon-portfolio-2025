@@ -17,7 +17,7 @@
         <!-- Real Image -->
         <img
           v-show="imageLoaded"
-          src="../../assets/images/hero.png"
+          src="../../assets/images/hero1.png"
           alt="Profile"
           class="relative w-52 sm:w-56 md:w-80 h-auto rounded-full object-cover shadow-lg"
           @load="onImageLoad"
@@ -38,7 +38,7 @@
           ></div>
           <!-- Paragraph -->
           <div
-            class="mx-auto md:mx-0 w-full max-w-md md:max-w-lg h-20 bg-gray-700 rounded animate-pulse"
+            class="mx-auto md:mx-0 w-full lg:w-96 max-w-md md:max-w-lg h-20 bg-gray-700 rounded animate-pulse"
           ></div>
           <!-- Button -->
           <div
