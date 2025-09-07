@@ -8,3 +8,9 @@
 import navbarComponents from "./components/layout/navbar.vue";
 import footerComponents from "./components/layout/footer.vue";
 </script>
+
+<style>
+body {
+  font-family: "Poppins", sans-serif;
+}
+</style>
