@@ -102,6 +102,8 @@ import linuxLogo from "@/assets/images/tech/linux-original.png";
 import firebaseLogo from "@/assets/images/tech/firebase-plain.png";
 import mysqlLogo from "@/assets/images/tech/mysql-original-wordmark.png";
 import sqlserverLogo from "@/assets/images/tech/microsoftsqlserver-plain-wordmark.png";
+import sqlliteLogo from "@/assets/images/tech/sqlite-original-wordmark.png";
+import postgresqlLogo from "@/assets/images/tech/postgresql-plain-wordmark.png";
 import mongodbLogo from "@/assets/images/tech/mongodb-plain-wordmark.png";
 
 const languages = ref([
@@ -137,5 +139,12 @@ const tools = ref([
   linuxLogo,
 ]);
 
-const databases = ref([firebaseLogo, mysqlLogo, sqlserverLogo, mongodbLogo]);
+const databases = ref([
+  firebaseLogo,
+  mysqlLogo,
+  sqlserverLogo,
+  sqlliteLogo,
+  postgresqlLogo,
+  mongodbLogo,
+]);
 </script>
