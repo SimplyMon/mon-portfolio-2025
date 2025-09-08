@@ -4,8 +4,12 @@
   >
     <div class="max-w-5xl w-full mx-auto text-center mt-20 mb-20 lg:mt-0">
       <!-- Title -->
-      <h1 class="text-4xl font-bold mb-2">Tech Stack</h1>
-      <div class="w-20 h-1 bg-orange-500 rounded mb-10 mx-auto"></div>
+      <div class="group text-center inline-block">
+        <h1 class="text-4xl font-bold mb-2 cursor-pointer">Tech Stack</h1>
+        <div
+          class="w-20 h-1 bg-orange-500 rounded mb-10 lg:mb-16 mx-auto transition-all duration-500 group-hover:w-full"
+        ></div>
+      </div>
 
       <!-- Grid -->
       <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12 text-center">

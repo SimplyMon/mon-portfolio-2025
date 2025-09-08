@@ -2,12 +2,16 @@
   <section class="bg-[#0D0D0D] text-white px-6 py-16">
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-3xl md:text-4xl font-bold">My Projects</h2>
-      <p class="text-gray-400 mt-2">
-        Tap or click the <span class="text-orange-500">picture</span> to view
-        projects
+      <p class="relative text-gray-400 mt-2 inline-block group cursor-pointer">
+        Tap or click the
+        <span class="text-[#FD6F00]"> picture </span>
+        to view projects
+        <span
+          class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-32 h-1 bg-[#FD6F00] rounded transition-all duration-500 group-hover:w-full"
+        ></span>
       </p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12 lg:mt-16">
         <div
           v-for="(project, index) in projects"
           :key="index"
@@ -53,7 +57,7 @@
           </div>
 
           <!-- Project Info -->
-          <p class="text-sm text-orange-400 mt-3">{{ project.category }}</p>
+          <p class="text-sm text-[#FD6F00] mt-3">{{ project.category }}</p>
           <h3 class="text-lg font-semibold">{{ project.title }}</h3>
         </div>
       </div>

@@ -158,19 +158,22 @@
       </div>
     </div>
   </section>
+  <home3 />
   <home1 />
   <home2 />
-
-  <NotFoundScreen />
+  <testimonials />
+  <home4 />
 </template>
-
+`
 <script setup>
 import { ref, onMounted } from "vue";
 import home1 from "../sections/home1.vue";
 import home2 from "../sections/home2.vue";
+import home3 from "../sections/home3.vue";
+import home4 from "../sections/home4.vue";
+import testimonials from "../sections/testimonials.vue";
 
 import skeletonLoader from "../skeletons/skeletonLoader.vue";
-import NotFoundScreen from "../layout/NotFound.vue";
 
 const imageLoaded = ref(false);
 const textLoaded = ref(false);
