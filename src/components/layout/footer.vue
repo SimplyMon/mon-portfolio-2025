@@ -2,7 +2,7 @@
   <footer class="bg-[#0D0D0D] text-[#F1FAEE] py-10">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div
-        class="flex flex-col md:flex-row justify-between items-center md:items-start gap-10"
+        class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8"
       >
         <div
           class="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left"
@@ -21,18 +21,18 @@
         <div
           class="flex flex-col sm:flex-row items-center sm:items-start space-y-3 sm:space-y-0 sm:space-x-8 text-center"
         >
-          <router-link to="/" class="hover:text-white transition-colors"
+          <router-link to="/" class="hover:text-[#FD6F00] transition-colors"
             >Home</router-link
           >
           <router-link
             to="/case-study"
-            class="hover:text-white transition-colors"
+            class="hover:text-[#FD6F00] transition-colors"
             >Case Study</router-link
           >
-          <router-link to="/resume" class="hover:text-white transition-colors"
+          <router-link to="/resume" class="hover:text-[#FD6F00] transition-colors"
             >Resume</router-link
           >
-          <router-link to="/contacts" class="hover:text-white transition-colors"
+          <router-link to="/contacts" class="hover:text-[#FD6F00] transition-colors"
             >Contacts</router-link
           >
         </div>
