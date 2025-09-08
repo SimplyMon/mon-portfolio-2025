@@ -82,7 +82,7 @@
               <div class="mt-5 flex space-x-4">
                 <!-- LinkedIn -->
                 <a
-                  href="https://www.linkedin.com/in/yourprofile"
+                  href="https://www.linkedin.com/in/simon-expression-pasag-85b1112b7/"
                   target="_blank"
                   class="hover:text-[#0A66C2]"
                 >
@@ -100,7 +100,7 @@
 
                 <!-- Facebook -->
                 <a
-                  href="https://www.facebook.com/yourprofile"
+                  href="https://www.facebook.com/simon.pasag.30"
                   target="_blank"
                   class="hover:text-[#1877F2]"
                 >
@@ -118,7 +118,7 @@
 
                 <!-- GitHub -->
                 <a
-                  href="https://github.com/yourprofile"
+                  href="https://github.com/SimplyMon"
                   target="_blank"
                   class="hover:text-gray-400"
                 >
