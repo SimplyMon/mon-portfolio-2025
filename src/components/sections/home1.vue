@@ -1,65 +1,76 @@
 <template>
   <section
-    class="bg-[#0D0D0D] text-white px-6 min-h-screen flex items-center justify-center"
+    class="bg-[#0D0D0D] text-[#F1FAEE] flex items-center justify-center px-6 pt-16"
   >
-    <div class="max-w-5xl w-full mx-auto text-center mt-20 mb-20 lg:mt-0">
-      <!-- Title -->
-      <div class="group text-center inline-block">
-        <h1 class="text-4xl font-bold mb-2 cursor-pointer">Tech Stack</h1>
+    <div class="max-w-4xl w-full">
+      <h2 class="text-3xl md:text-4xl font-bold text-center">Education</h2>
+      <div class="w-16 h-1 bg-[#FD6F00] mx-auto mt-2 mb-12 lg:mb-16"></div>
+
+      <!-- Timeline -->
+      <div class="relative">
         <div
-          class="w-20 h-1 bg-orange-500 rounded mb-10 lg:mb-16 mx-auto transition-all duration-500 group-hover:w-full"
+          class="absolute left-1/2 top-0 h-full border-l-2 border-gray-700 transform -translate-x-1/2"
         ></div>
-      </div>
 
-      <!-- Grid -->
-      <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12 text-center">
-        <!-- Languages -->
-        <div>
-          <h2 class="text-lg font-semibold mb-4">Languages:</h2>
-          <div
-            class="grid grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-6 justify-items-center"
-          >
-            <img
-              v-for="(lang, i) in languages"
-              :key="i"
-              :src="lang"
-              class="h-12"
-            />
+        <div
+          class="absolute left-1/2 top-0 w-0.5 h-full bg-[#FD6F00] transform -translate-x-1/2 origin-top progress-line"
+        ></div>
+
+        <div class="mb-12 md:mb-20 flex justify-end items-center w-full reveal">
+          <div class="w-1/2 pr-8 text-right">
+            <h3 class="text-lg font-bold">Jesus Reigns Christian College</h3>
+            <p class="text-gray-400 text-sm">2022 - 2025</p>
+          </div>
+          <div class="relative flex flex-col items-center">
+            <span
+              class="circle z-10 w-6 h-6 rounded-full border-2 border-gray-400 transition-all duration-700"
+            ></span>
+          </div>
+          <div class="w-1/2"></div>
+        </div>
+
+        <div
+          class="mb-12 md:mb-20 flex justify-start items-center w-full reveal"
+        >
+          <div class="w-1/2"></div>
+          <div class="relative flex flex-col items-center">
+            <span
+              class="circle z-10 w-6 h-6 rounded-full border-2 border-gray-400 transition-all duration-700"
+            ></span>
+          </div>
+          <div class="w-1/2 pl-8">
+            <h3 class="text-lg font-bold">
+              Arrellano University Andres Bonifacio Campus
+            </h3>
+            <p class="text-gray-400 text-sm">2020 - 2022</p>
           </div>
         </div>
 
-        <!-- Frameworks -->
-        <div>
-          <h2 class="text-lg font-semibold mb-4">Frameworks:</h2>
-          <div
-            class="grid grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-6 justify-items-center"
-          >
-            <img
-              v-for="(fw, i) in frameworks"
-              :key="i"
-              :src="fw"
-              class="h-12"
-            />
+        <div class="mb-12 md:mb-20 flex justify-end items-center w-full reveal">
+          <div class="w-1/2 pr-8 text-right">
+            <h3 class="text-lg font-bold">Antonio C. Esguerra</h3>
+            <p class="text-gray-400 text-sm">2016 - 2020</p>
           </div>
+          <div class="relative flex flex-col items-center">
+            <span
+              class="circle z-10 w-6 h-6 rounded-full border-2 border-gray-400 transition-all duration-700"
+            ></span>
+          </div>
+          <div class="w-1/2"></div>
         </div>
 
-        <!-- Tools -->
-        <div>
-          <h2 class="text-lg font-semibold mb-4">Tools:</h2>
-          <div
-            class="grid grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-6 justify-items-center"
-          >
-            <img v-for="(tool, i) in tools" :key="i" :src="tool" class="h-12" />
+        <div
+          class="mb-12 md:mb-20 flex justify-start items-center w-full reveal"
+        >
+          <div class="w-1/2"></div>
+          <div class="relative flex flex-col items-center">
+            <span
+              class="circle z-10 w-6 h-6 rounded-full border-2 border-gray-400 transition-all duration-700"
+            ></span>
           </div>
-        </div>
-
-        <!-- Databases -->
-        <div>
-          <h2 class="text-lg font-semibold mb-4">Databases:</h2>
-          <div
-            class="grid grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-6 justify-items-center"
-          >
-            <img v-for="(db, i) in databases" :key="i" :src="db" class="h-12" />
+          <div class="w-1/2 pl-8">
+            <h3 class="text-lg font-bold">Sitio Tapayan Elementary School</h3>
+            <p class="text-gray-400 text-sm">2010 - 2016</p>
           </div>
         </div>
       </div>
@@ -68,85 +79,53 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 
-// languages
-import phpLogo from "@/assets/images/tech/php-plain.png";
-import cppLogo from "@/assets/images/tech/cplusplus-plain.png";
-import javaLogo from "@/assets/images/tech/java-original.png";
-import pythonLogo from "@/assets/images/tech/python-original.png";
-import csharpLogo from "@/assets/images/tech/csharp-plain.png";
-import jsLogo from "@/assets/images/tech/javascript-original.png";
-import htmlLogo from "@/assets/images/tech/html5-plain.png";
-import cssLogo from "@/assets/images/tech/css3-plain.png";
+const currentProgress = ref(0);
+const targetProgress = ref(0);
 
-// frameworks
-import vueLogo from "@/assets/images/tech/vuejs-original.png";
-import reactLogo from "@/assets/images/tech/react-original.png";
-import jqueryLogo from "@/assets/images/tech/jquery-original.png";
-import bootstrapLogo from "@/assets/images/tech/bootstrap-original.png";
-import tailwindLogo from "@/assets/images/tech/tailwindcss-plain.png";
-import nodejsLogo from "@/assets/images/tech/nodejs-original-wordmark.png";
-import expressjsLogo from "@/assets/images/tech/express-original-wordmark.png";
-import laravelLogo from "@/assets/images/tech/laravel-plain-wordmark.png";
+onMounted(() => {
+  const progressLine = document.querySelector(".progress-line");
+  const timeline = progressLine.parentElement;
 
-// tools
-import githubLogo from "@/assets/images/tech/github-original.png";
-import gitLogo from "@/assets/images/tech/git-plain.png";
-import vscodeLogo from "@/assets/images/tech/vscode-original.png";
-import npmLogo from "@/assets/images/tech/npm-original-wordmark.png";
-import figmaLogo from "@/assets/images/tech/figma-original.png";
-import photoshopLogo from "@/assets/images/tech/photoshop-plain.png";
-import debianLogo from "@/assets/images/tech/debian-plain-wordmark.png";
-import linuxLogo from "@/assets/images/tech/linux-original.png";
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const circle = entry.target.querySelector(".circle");
+        if (entry.isIntersecting) {
+          circle?.classList.add("bg-[#FD6F00]");
+          circle?.classList.remove("bg-black");
+        } else {
+          circle?.classList.remove("bg-[#FD6F00]");
+          circle?.classList.add("bg-black");
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
 
-// databases
-import firebaseLogo from "@/assets/images/tech/firebase-plain.png";
-import mysqlLogo from "@/assets/images/tech/mysql-original-wordmark.png";
-import sqlserverLogo from "@/assets/images/tech/microsoftsqlserver-plain-wordmark.png";
-import sqlliteLogo from "@/assets/images/tech/sqlite-original-wordmark.png";
-import postgresqlLogo from "@/assets/images/tech/postgresql-plain-wordmark.png";
-import mongodbLogo from "@/assets/images/tech/mongodb-plain-wordmark.png";
+  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-const languages = ref([
-  phpLogo,
-  cppLogo,
-  javaLogo,
-  pythonLogo,
-  csharpLogo,
-  jsLogo,
-  htmlLogo,
-  cssLogo,
-]);
+  const measureProgress = () => {
+    const rect = timeline.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    targetProgress.value = Math.min(
+      Math.max((windowHeight - rect.top) / rect.height, 0),
+      1
+    );
+  };
 
-const frameworks = ref([
-  vueLogo,
-  reactLogo,
-  jqueryLogo,
-  bootstrapLogo,
-  tailwindLogo,
-  nodejsLogo,
-  expressjsLogo,
-  laravelLogo,
-]);
+  const animate = () => {
+    currentProgress.value +=
+      (targetProgress.value - currentProgress.value) * 0.03;
+    progressLine.style.transform = `translateX(-50%) scaleY(${currentProgress.value})`;
+    requestAnimationFrame(animate);
+  };
 
-const tools = ref([
-  githubLogo,
-  gitLogo,
-  vscodeLogo,
-  npmLogo,
-  figmaLogo,
-  photoshopLogo,
-  debianLogo,
-  linuxLogo,
-]);
+  window.addEventListener("scroll", measureProgress);
+  window.addEventListener("resize", measureProgress);
 
-const databases = ref([
-  firebaseLogo,
-  mysqlLogo,
-  sqlserverLogo,
-  sqlliteLogo,
-  postgresqlLogo,
-  mongodbLogo,
-]);
+  measureProgress();
+  animate();
+});
 </script>

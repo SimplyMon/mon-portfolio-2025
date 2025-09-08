@@ -1,49 +1,57 @@
 <template>
-  <footer class="bg-gray-900 text-gray-300 py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Top Section -->
+  <footer class="bg-[#0D0D0D] text-[#F1FAEE] py-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div
-        class="flex flex-col md:flex-row justify-between items-center md:items-start gap-6"
+        class="flex flex-col md:flex-row justify-between items-center md:items-start gap-10"
       >
-        <!-- Logo / Brand -->
-        <div class="text-center md:text-left">
-          <h2 class="text-xl font-bold text-white">MON DEV</h2>
-          <p class="mt-2 text-sm text-gray-400">Building Web Applications</p>
+        <div
+          class="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left"
+        >
+          <img
+            src="../../assets/images/logo1.png"
+            alt="Mon Dev Logo"
+            class="h-16 w-16 rounded-full object-cover"
+          />
+          <div class="flex flex-col">
+            <h2 class="text-2xl font-bold text-[#F1FAEE]">MON DEV</h2>
+            <p class="text-sm text-[#F1FAEE]">Web Developer • UI/UX Designer</p>
+          </div>
         </div>
 
-        <!-- Navigation Links -->
-        <div class="flex space-x-6">
-          <router-link to="/">
-            <a href="#" class="hover:text-white">Home</a>
-          </router-link>
-          <router-link to="/case-study">
-            <a href="#" class="hover:text-white">Case Study</a>
-          </router-link>
-          <router-link to="/resume">
-            <a href="#" class="hover:text-white">Resume</a>
-          </router-link>
-          <router-link to="/contacts">
-            <a href="#" class="hover:text-white">Contacts</a>
-          </router-link>
+        <div
+          class="flex flex-col sm:flex-row items-center sm:items-start space-y-3 sm:space-y-0 sm:space-x-8 text-center"
+        >
+          <router-link to="/" class="hover:text-white transition-colors"
+            >Home</router-link
+          >
+          <router-link
+            to="/case-study"
+            class="hover:text-white transition-colors"
+            >Case Study</router-link
+          >
+          <router-link to="/resume" class="hover:text-white transition-colors"
+            >Resume</router-link
+          >
+          <router-link to="/contacts" class="hover:text-white transition-colors"
+            >Contacts</router-link
+          >
         </div>
 
-        <!-- Social Icons -->
-        <div class="flex space-x-4">
-          <a href="#" class="hover:text-white">
-            <i class="fab fa-twitter"></i>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-twitter fa-lg"></i>
           </a>
-          <a href="#" class="hover:text-white">
-            <i class="fab fa-github"></i>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-github fa-lg"></i>
           </a>
-          <a href="#" class="hover:text-white">
-            <i class="fab fa-linkedin"></i>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-linkedin fa-lg"></i>
           </a>
         </div>
       </div>
 
-      <!-- Bottom Section -->
       <div
-        class="mt-6 border-t border-gray-700 pt-4 text-center text-sm text-gray-500"
+        class="mt-1 mb-14 md:mb-0 md:mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500"
       >
         © 2025 Mon Dev. All rights reserved.
       </div>

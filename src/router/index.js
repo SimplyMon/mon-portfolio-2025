@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import homeScreen from "@/components/screens/home.vue";
+import contactsScreen from "@/components/screens/contacts.vue";
+
 import notFoundScreen from "@/components/layout/NotFound.vue";
 
 const routes = [
@@ -8,6 +10,11 @@ const routes = [
     path: "/",
     name: "Home",
     component: homeScreen,
+  },
+  {
+    path: "/contacts",
+    name: "Contacts",
+    component: contactsScreen,
   },
   {
     path: "/:pathMatch(.*)*",

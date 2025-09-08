@@ -106,10 +106,8 @@ const handleScroll = () => {
   const currentScroll = window.scrollY;
 
   if (currentScroll > lastScroll && currentScroll > 50) {
-    // Scrolling down
     isShrunk.value = true;
   } else if (currentScroll < lastScroll) {
-    // Scrolling up
     isShrunk.value = false;
   }
 

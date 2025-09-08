@@ -1,64 +1,64 @@
 <template>
-  <section class="bg-[#0D0D0D] text-white px-6 py-16">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold">My Projects</h2>
-      <p class="relative text-gray-400 mt-2 inline-block group cursor-pointer">
-        Tap or click the
-        <span class="text-[#FD6F00]"> picture </span>
-        to view projects
-        <span
-          class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-32 h-1 bg-[#FD6F00] rounded transition-all duration-500 group-hover:w-full"
-        ></span>
-      </p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12 lg:mt-16">
+  <section
+    class="bg-[#0D0D0D] text-[#F1FAEE] px-6 pt-16 flex items-center justify-center"
+  >
+    <div class="max-w-5xl w-full mx-auto text-center mt-20 mb-20 lg:mt-0">
+      <div class="group text-center inline-block">
+        <h1 class="text-4xl font-bold mb-2 cursor-pointer">Tech Stack</h1>
         <div
-          v-for="(project, index) in projects"
-          :key="index"
-          class="hover:scale-105 transform transition duration-300"
-        >
-          <!-- Image wrapper -->
+          class="w-20 h-1 bg-[#FD6F00] rounded mb-10 lg:mb-16 mx-auto transition-all duration-500 group-hover:w-full"
+        ></div>
+      </div>
+
+      <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12 text-center">
+        <!-- Languages -->
+        <div>
+          <h2 class="text-lg font-semibold mb-4">Languages:</h2>
           <div
-            class="relative group rounded-lg overflow-hidden cursor-pointer"
-            @click="toggleOverlay(index)"
+            class="grid grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-6 justify-items-center"
           >
             <img
-              :src="project.image"
-              alt="project"
-              class="rounded-lg shadow-lg w-full h-48 object-cover"
+              v-for="(lang, i) in languages"
+              :key="i"
+              :src="lang"
+              class="h-12"
             />
-
-            <!-- Full glass overlay -->
-            <div
-              v-if="project.caseStudy || project.livePreview"
-              class="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-white/10 backdrop-blur-sm opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 group-hover:backdrop-blur-lg transition-all duration-500 ease-in-out rounded-lg"
-              :class="{
-                'opacity-100 scale-100 backdrop-blur-lg':
-                  activeProject === index,
-              }"
-            >
-              <a
-                v-if="project.caseStudy"
-                :href="project.caseStudy"
-                target="_blank"
-                class="bg-[#FD6F00] text-white px-4 py-2 rounded-md font-medium hover:bg-orange-600 transition"
-              >
-                View Case Study
-              </a>
-              <a
-                v-if="project.livePreview"
-                :href="project.livePreview"
-                target="_blank"
-                class="bg-white/80 text-black px-4 py-2 rounded-md font-medium hover:bg-gray-200 transition"
-              >
-                Live Preview
-              </a>
-            </div>
           </div>
+        </div>
 
-          <!-- Project Info -->
-          <p class="text-sm text-[#FD6F00] mt-3">{{ project.category }}</p>
-          <h3 class="text-lg font-semibold">{{ project.title }}</h3>
+        <!-- Frameworks -->
+        <div>
+          <h2 class="text-lg font-semibold mb-4">Frameworks:</h2>
+          <div
+            class="grid grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-6 justify-items-center"
+          >
+            <img
+              v-for="(fw, i) in frameworks"
+              :key="i"
+              :src="fw"
+              class="h-12"
+            />
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div>
+          <h2 class="text-lg font-semibold mb-4">Tools:</h2>
+          <div
+            class="grid grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-6 justify-items-center"
+          >
+            <img v-for="(tool, i) in tools" :key="i" :src="tool" class="h-12" />
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div>
+          <h2 class="text-lg font-semibold mb-4">Databases:</h2>
+          <div
+            class="grid grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-6 justify-items-center"
+          >
+            <img v-for="(db, i) in databases" :key="i" :src="db" class="h-12" />
+          </div>
         </div>
       </div>
     </div>
@@ -68,53 +68,83 @@
 <script setup>
 import { ref } from "vue";
 
-import guardianLock from "@/assets/images/projects/guardianLock.png";
-import diverseWeb from "@/assets/images/projects/diverseWeb.png";
-import lamesaPos from "@/assets/images/projects/lamesaPos.png";
-import lamesaWeb from "@/assets/images/projects/lamesaWeb.png";
-import bozriahPos from "@/assets/images/projects/bozriahPos.png";
-import bozriahKiosk from "@/assets/images/projects/bozriahKiosk.png";
+// languages
+import phpLogo from "@/assets/images/tech/php-plain.png";
+import cppLogo from "@/assets/images/tech/cplusplus-plain.png";
+import javaLogo from "@/assets/images/tech/java-original.png";
+import pythonLogo from "@/assets/images/tech/python-original.png";
+import csharpLogo from "@/assets/images/tech/csharp-plain.png";
+import jsLogo from "@/assets/images/tech/javascript-original.png";
+import htmlLogo from "@/assets/images/tech/html5-plain.png";
+import cssLogo from "@/assets/images/tech/css3-plain.png";
 
-const activeProject = ref(null);
+// frameworks
+import vueLogo from "@/assets/images/tech/vuejs-original.png";
+import reactLogo from "@/assets/images/tech/react-original.png";
+import jqueryLogo from "@/assets/images/tech/jquery-original.png";
+import bootstrapLogo from "@/assets/images/tech/bootstrap-original.png";
+import tailwindLogo from "@/assets/images/tech/tailwindcss-plain.png";
+import nodejsLogo from "@/assets/images/tech/nodejs-original-wordmark.png";
+import expressjsLogo from "@/assets/images/tech/express-original-wordmark.png";
+import laravelLogo from "@/assets/images/tech/laravel-plain-wordmark.png";
 
-const toggleOverlay = (index) => {
-  activeProject.value = activeProject.value === index ? null : index;
-};
+// tools
+import githubLogo from "@/assets/images/tech/github-original.png";
+import gitLogo from "@/assets/images/tech/git-plain.png";
+import vscodeLogo from "@/assets/images/tech/vscode-original.png";
+import npmLogo from "@/assets/images/tech/npm-original-wordmark.png";
+import figmaLogo from "@/assets/images/tech/figma-original.png";
+import photoshopLogo from "@/assets/images/tech/photoshop-plain.png";
+import debianLogo from "@/assets/images/tech/debian-plain-wordmark.png";
+import linuxLogo from "@/assets/images/tech/linux-original.png";
 
-const projects = [
-  {
-    title: "Guardian Lock",
-    category: "Web based Smart Door Application",
-    image: guardianLock,
-    caseStudy: "guardian-lock-case-study",
-    livePreview: "https://guardian-lock.vercel.app/",
-  },
-  {
-    title: "Diverse Oral Core",
-    category: "Dental Clinic Platform",
-    image: diverseWeb,
-    caseStudy: "diverse-oral-core-case-study",
-    livePreview: "https://diverseoralcore.vercel.app/",
-  },
-  {
-    title: "Lamesa Inasal POS System",
-    category: "Web based Point Of Sale System",
-    image: lamesaPos,
-  },
-  {
-    title: "Lamesa Inasal Website",
-    category: "Lamesa Website",
-    image: lamesaWeb,
-  },
-  {
-    title: "Bozriah POS",
-    category: "Web based Point Of Sale System",
-    image: bozriahPos,
-  },
-  {
-    title: "Bozriah Kiosk",
-    category: "Web based Kiosk System",
-    image: bozriahKiosk,
-  },
-];
+// databases
+import firebaseLogo from "@/assets/images/tech/firebase-plain.png";
+import mysqlLogo from "@/assets/images/tech/mysql-original-wordmark.png";
+import sqlserverLogo from "@/assets/images/tech/microsoftsqlserver-plain-wordmark.png";
+import sqlliteLogo from "@/assets/images/tech/sqlite-original-wordmark.png";
+import postgresqlLogo from "@/assets/images/tech/postgresql-plain-wordmark.png";
+import mongodbLogo from "@/assets/images/tech/mongodb-plain-wordmark.png";
+
+const languages = ref([
+  phpLogo,
+  cppLogo,
+  javaLogo,
+  pythonLogo,
+  csharpLogo,
+  jsLogo,
+  htmlLogo,
+  cssLogo,
+]);
+
+const frameworks = ref([
+  vueLogo,
+  reactLogo,
+  jqueryLogo,
+  bootstrapLogo,
+  tailwindLogo,
+  nodejsLogo,
+  expressjsLogo,
+  laravelLogo,
+]);
+
+const tools = ref([
+  githubLogo,
+  gitLogo,
+  vscodeLogo,
+  npmLogo,
+  figmaLogo,
+  photoshopLogo,
+  debianLogo,
+  linuxLogo,
+]);
+
+const databases = ref([
+  firebaseLogo,
+  mysqlLogo,
+  sqlserverLogo,
+  sqlliteLogo,
+  postgresqlLogo,
+  mongodbLogo,
+]);
 </script>

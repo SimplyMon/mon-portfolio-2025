@@ -11,7 +11,7 @@
         <!-- Circle Skeleton -->
         <div
           v-if="!imageLoaded"
-          class="w-52 sm:w-56 md:w-80 h-52 sm:h-56 md:h-80 rounded-full bg-gray-700 animate-pulse"
+          class="w-52 sm:w-56 md:w-80 h-72 sm:h-72 md:h-96 rounded-full bg-gray-700 animate-pulse"
         ></div>
 
         <!-- Real Image -->
@@ -158,25 +158,69 @@
       </div>
     </div>
   </section>
-  <home3 />
   <home1 />
   <home2 />
-  <testimonials />
+  <home3 />
   <home4 />
+  <home5 />
+
+  <!-- Scroll to Top Button -->
+  <button
+    v-show="showScrollTop"
+    @click="scrollToTop"
+    class="fixed bottom-28 md:bottom-6 right-4 md:right-12 p-4 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-white shadow-xl hover:scale-110 hover:from-orange-600 hover:to-orange-700 transition transform duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2"
+    aria-label="Scroll to top"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M5 15l7-7 7 7"
+      />
+    </svg>
+  </button>
 </template>
 `
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import home1 from "../sections/home1.vue";
 import home2 from "../sections/home2.vue";
 import home3 from "../sections/home3.vue";
 import home4 from "../sections/home4.vue";
-import testimonials from "../sections/testimonials.vue";
+import home5 from "../sections/home5.vue";
 
 import skeletonLoader from "../skeletons/skeletonLoader.vue";
 
 const imageLoaded = ref(false);
 const textLoaded = ref(false);
+
+const showScrollTop = ref(false);
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
+function handleScroll() {
+  showScrollTop.value = window.scrollY > 300;
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 
 function onImageLoad() {
   setTimeout(() => {
