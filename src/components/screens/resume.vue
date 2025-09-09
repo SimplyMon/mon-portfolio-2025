@@ -176,7 +176,7 @@
     <div class="text-center mt-20">
       <a
         href="/Simon-2025.pdf"
-        download="Simon-2025.pdf"
+        target="_blank"
         class="bg-[#FD6F00] hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-md transition"
       >
         Download Resume
