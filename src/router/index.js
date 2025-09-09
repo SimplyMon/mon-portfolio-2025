@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import homeScreen from "@/components/screens/home.vue";
 import contactsScreen from "@/components/screens/contacts.vue";
+import resumeScreen from "@/components/screens/resume.vue";
 
 import notFoundScreen from "@/components/layout/NotFound.vue";
 
@@ -15,6 +16,11 @@ const routes = [
     path: "/contacts",
     name: "Contacts",
     component: contactsScreen,
+  },
+  {
+    path: "/resume",
+    name: "Resume",
+    component: resumeScreen,
   },
   {
     path: "/:pathMatch(.*)*",

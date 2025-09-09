@@ -73,7 +73,7 @@
             <div class="mt-8 flex flex-col items-center md:items-start">
               <router-link
                 to="/case-study"
-                class="bg-[#FD6F00] hover:bg-orange-600 px-8 py-3 rounded-md font-medium transition transform hover:scale-105"
+                class="bg-[#FD6F00] hover:bg-orange-600 px-8 py-3 rounded-md font-medium"
               >
                 View Case Studies
               </router-link>
