@@ -1,8 +1,27 @@
 <template>
   <section class="bg-[#0D0D0D] text-[#F1FAEE] px-6 py-16">
     <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold">My Projects</h2>
-      <p class="relative text-gray-400 mt-2 inline-block group cursor-pointer">
+      <h2
+        ref="titleRef"
+        :class="[
+          'text-3xl md:text-4xl font-bold transition-all duration-1000 ease-out',
+          isVisible.title
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-10',
+        ]"
+      >
+        My Projects
+      </h2>
+
+      <p
+        ref="descRef"
+        :class="[
+          'relative text-gray-400 mt-2 inline-block cursor-pointer transition-all duration-1000 ease-out delay-300',
+          isVisible.desc
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-10',
+        ]"
+      >
         Tap or click the
         <span class="text-[#FD6F00]"> picture </span>
         to view projects
@@ -17,7 +36,15 @@
         <div
           v-for="(project, index) in projects"
           :key="index"
-          class="hover:scale-105 transform transition duration-300"
+          ref="projectRefs"
+          :class="[
+            'hover:scale-105 transform transition duration-300',
+            'transition-all duration-1000 ease-out',
+            isVisible.projects[index]
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-10',
+            `delay-[${index * 150}ms]`,
+          ]"
         >
           <!-- Image wrapper -->
           <div
@@ -66,7 +93,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 import guardianLock from "@/assets/images/projects/guardianLock.png";
 import diverseWeb from "@/assets/images/projects/diverseWeb.png";
@@ -76,7 +103,6 @@ import bozriahPos from "@/assets/images/projects/bozriahPos.png";
 import bozriahKiosk from "@/assets/images/projects/bozriahKiosk.png";
 
 const activeProject = ref(null);
-
 const toggleOverlay = (index) => {
   activeProject.value = activeProject.value === index ? null : index;
 };
@@ -117,4 +143,37 @@ const projects = [
     image: bozriahKiosk,
   },
 ];
+
+// Animation visibility states
+const isVisible = ref({
+  title: false,
+  desc: false,
+  projects: Array(projects.length).fill(false),
+});
+
+const titleRef = ref(null);
+const descRef = ref(null);
+const projectRefs = ref([]);
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target === titleRef.value) isVisible.value.title = true;
+          if (entry.target === descRef.value) isVisible.value.desc = true;
+          const index = projectRefs.value.indexOf(entry.target);
+          if (index !== -1) isVisible.value.projects[index] = true;
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  if (titleRef.value) observer.observe(titleRef.value);
+  if (descRef.value) observer.observe(descRef.value);
+  projectRefs.value.forEach((el) => {
+    if (el) observer.observe(el);
+  });
+});
 </script>

@@ -91,7 +91,7 @@
               />
             </svg>
             <a
-              href="https://github.com/SimplyMon"
+              href="https://github.com/yourusername"
               target="_blank"
               class="text-gray-300 hover:text-[#FD6F00]"
               >GitHub</a

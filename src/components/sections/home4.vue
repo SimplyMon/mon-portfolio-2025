@@ -1,11 +1,29 @@
 <template>
   <section class="bg-[#0D0D0D] text-white py-16">
     <div class="max-w-5xl mx-auto text-center px-6">
-      <h2 class="text-3xl md:text-4xl font-bold mb-12">
+      <!-- Title -->
+      <h2
+        ref="titleRef"
+        :class="[
+          'text-3xl md:text-4xl font-bold mb-12 transition-all duration-1000 ease-out',
+          isVisible.title
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-10',
+        ]"
+      >
         What <span class="text-[#FD6F00]">Clients</span> Say
       </h2>
 
-      <div class="overflow-hidden relative">
+      <!-- Slider -->
+      <div
+        ref="sliderRef"
+        :class="[
+          'overflow-hidden relative transition-all duration-1000 ease-out delay-300',
+          isVisible.slider
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 translate-y-10',
+        ]"
+      >
         <div
           class="flex transition-transform duration-700 ease-in-out"
           :style="{ transform: `translateX(-${activeIndex * 100}%)` }"
@@ -29,6 +47,7 @@
           </div>
         </div>
 
+        <!-- Dots -->
         <div class="flex justify-center mt-6 space-x-3">
           <button
             v-for="(dot, i) in testimonials"
@@ -84,8 +103,28 @@ function goTo(index) {
   startAutoPlay();
 }
 
+// Scroll animations
+const isVisible = ref({ title: false, slider: false });
+const titleRef = ref(null);
+const sliderRef = ref(null);
+
 onMounted(() => {
   startAutoPlay();
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target === titleRef.value) isVisible.value.title = true;
+          if (entry.target === sliderRef.value) isVisible.value.slider = true;
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  if (titleRef.value) observer.observe(titleRef.value);
+  if (sliderRef.value) observer.observe(sliderRef.value);
 });
 
 onBeforeUnmount(() => {

@@ -2,7 +2,7 @@
   <section
     class="bg-[#0D0D0D] text-[#F1FAEE] min-h-screen px-6 py-12 md:pt-36 md:pb-40"
   >
-    <div class="max-w-5xl mx-auto space-y-8">
+    <div class="max-w-5xl mx-auto space-y-8 opacity-0 animate-fade-in-up">
       <header class="text-center space-y-2">
         <h1 class="text-3xl font-bold">Simon Pasag</h1>
         <p class="text-gray-400">
@@ -52,7 +52,12 @@
           <div>
             <h3 class="font-semibold text-[#F1FAEE]">
               Guardian Lock – Smart Door Lock System
-              <a href="#" class="text-blue-400 hover:underline">(view)</a>
+              <a
+                href="https://guardian-lock.vercel.app/"
+                target="_blank"
+                class="text-blue-400 hover:underline"
+                >(view)</a
+              >
             </h3>
             <p class="italic text-gray-400 mb-2">
               Technologies: HTML, CSS, JavaScript, Vue.js, Firebase
@@ -77,7 +82,12 @@
           <div class="text-[#F1FAEE]">
             <h3 class="font-semibold">
               Diverse Oral Core – Dental Clinic Platform
-              <a href="#" class="text-blue-400 hover:underline">(view)</a>
+              <a
+                href="https://diverseoralcore.vercel.app/"
+                target="_blank"
+                class="text-blue-400 hover:underline"
+                >(view)</a
+              >
             </h3>
             <p class="italic text-gray-400 mb-2">
               Technologies: Vue.js, Firebase Realtime Database, Google Maps API
@@ -174,3 +184,20 @@
     </div>
   </section>
 </template>
+
+<style scoped>
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out forwards;
+}
+</style>
