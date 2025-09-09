@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-[#0D0D0D] text-[#F1FAEE] py-10">
+  <footer class="bg-[#0D0D0D] text-[#F1FAEE] py-10 border-t border-gray-700">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div
         class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8"
@@ -29,10 +29,14 @@
             class="hover:text-[#FD6F00] transition-colors"
             >Case Study</router-link
           >
-          <router-link to="/resume" class="hover:text-[#FD6F00] transition-colors"
+          <router-link
+            to="/resume"
+            class="hover:text-[#FD6F00] transition-colors"
             >Resume</router-link
           >
-          <router-link to="/contacts" class="hover:text-[#FD6F00] transition-colors"
+          <router-link
+            to="/contacts"
+            class="hover:text-[#FD6F00] transition-colors"
             >Contacts</router-link
           >
         </div>
