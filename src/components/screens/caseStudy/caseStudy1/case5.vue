@@ -59,7 +59,7 @@ onMounted(() => {
 
 <style scoped>
 .fade-slide-enter-active {
-  transition: all 3s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all 6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .fade-slide-enter-from {
   opacity: 0;
