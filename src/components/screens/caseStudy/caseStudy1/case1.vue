@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative text-white min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center overflow-hidden bg-cover bg-center"
+    class="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center overflow-hidden bg-cover bg-center"
     :style="{ backgroundImage: `url(${bgImage})` }"
   >
     <div class="absolute inset-0 bg-black/60"></div>
@@ -19,7 +19,7 @@
       </h2>
 
       <div
-        class="flex flex-wrap justify-center items-center gap-6 text-gray-300 text-lg font-medium"
+        class="flex flex-wrap justify-center items-center gap-6 text-[#F1FAEE] text-lg font-medium"
       >
         <span
           class="relative group px-4 cursor-pointer transition transform hover:scale-110 hover:text-[#00D8FF]"
@@ -35,6 +35,7 @@
 
         <span
           class="relative group px-4 cursor-pointer transition transform hover:scale-110 hover:text-[#00D8FF]"
+          @click="$emit('go-to', 'case4Ref')"
         >
           The Problem
           <span
@@ -46,6 +47,7 @@
 
         <span
           class="relative group px-4 cursor-pointer transition transform hover:scale-110 hover:text-[#00D8FF]"
+          @click="$emit('go-to', 'case5Ref')"
         >
           The Goal
           <span

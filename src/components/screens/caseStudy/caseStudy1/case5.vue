@@ -1,0 +1,73 @@
+<template>
+  <section
+    ref="productSection"
+    class="bg-[#0D0D0D] min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden"
+  >
+    <transition name="fade-slide">
+      <div
+        v-if="visible"
+        class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div class="space-y-6">
+          <h2 class="text-4xl md:text-5xl font-extrabold text-[#00D8FF]">
+            The Goal
+          </h2>
+          <p class="text-[#F1FAEE] text-lg leading-relaxed">
+            The goal is to build a smart lock that makes home security
+            effortless and dependable for everyone. It will let you set
+            different access levels for family and guests, use advanced
+            biometric features like facial recognition for added peace of mind,
+            send instant alerts if someone tries to break in, and even predict
+            maintenance needs so the system is always ready when you need it.
+          </p>
+        </div>
+        <div class="flex justify-center relative">
+          <img
+            src="../../../../assets/images/case-study/goal.png"
+            alt="Product Mockup"
+            loading="lazy"
+            class="w-full max-w-md md:max-w-lg drop-shadow-2xl"
+          />
+        </div>
+      </div>
+    </transition>
+  </section>
+</template>
+
+<script setup>
+import { ref, onMounted, onUnmounted } from "vue";
+
+const productSection = ref(null);
+const visible = ref(false);
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          visible.value = true;
+          observer.disconnect();
+        }
+      });
+    },
+    { threshold: 0 }
+  );
+  if (productSection.value) observer.observe(productSection.value);
+});
+
+onUnmounted(() => {});
+</script>
+
+<style scoped>
+.fade-slide-enter-active {
+  transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateY(50px);
+}
+.fade-slide-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>

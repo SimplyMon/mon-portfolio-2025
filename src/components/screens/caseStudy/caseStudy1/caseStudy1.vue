@@ -55,6 +55,9 @@
 
   <case1Section ref="case1Ref" @go-to="scrollToSection" />
   <case2Section ref="case2Ref" />
+  <case3Section ref="case3Ref" />
+  <case4Section ref="case4Ref" />
+  <case5Section ref="case5Ref" />
   <NotFound />
 
   <!-- Scroll to Top Button -->
@@ -87,11 +90,18 @@
 import { ref, onMounted, onUnmounted } from "vue";
 import case1Section from "./case1.vue";
 import case2Section from "./case2.vue";
+import case3Section from "./case3.vue";
+import case4Section from "./case4.vue";
+import case5Section from "./case5.vue";
+
 import NotFound from "@/components/layout/NotFound.vue";
 
 const showContent = ref(false);
 const case1Ref = ref(null);
 const case2Ref = ref(null);
+const case3Ref = ref(null);
+const case4Ref = ref(null);
+const case5Ref = ref(null);
 const showScrollTop = ref(false);
 
 onMounted(() => {
@@ -111,7 +121,7 @@ onMounted(() => {
 });
 
 const scrollToSection = (section) => {
-  const target = { case1Ref, case2Ref }[section];
+  const target = { case1Ref, case2Ref, case3Ref, case4Ref, case5Ref }[section];
   if (target?.value?.$el) {
     target.value.$el.scrollIntoView({ behavior: "smooth" });
   }
