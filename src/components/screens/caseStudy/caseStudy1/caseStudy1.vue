@@ -56,23 +56,58 @@
   <case1Section ref="case1Ref" @go-to="scrollToSection" />
   <case2Section ref="case2Ref" />
   <NotFound />
+
+  <!-- Scroll to Top Button -->
+  <transition name="fade">
+    <button
+      v-show="showScrollTop"
+      @click="scrollToTop"
+      class="fixed bottom-28 md:bottom-6 right-4 md:right-12 p-4 rounded-full bg-[#00D8FF] text-black shadow-lg hover:bg-[#00c9e6] transition z-50"
+      aria-label="Scroll to top"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 15l7-7 7 7"
+        />
+      </svg>
+    </button>
+  </transition>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import case1Section from "./case1.vue";
 import case2Section from "./case2.vue";
-
 import NotFound from "@/components/layout/NotFound.vue";
 
 const showContent = ref(false);
 const case1Ref = ref(null);
 const case2Ref = ref(null);
+const showScrollTop = ref(false);
 
 onMounted(() => {
   setTimeout(() => {
     showContent.value = true;
   }, 300);
+
+  const handleScroll = () => {
+    showScrollTop.value = window.scrollY > 200;
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  onUnmounted(() => {
+    window.removeEventListener("scroll", handleScroll);
+  });
 });
 
 const scrollToSection = (section) => {
@@ -80,6 +115,10 @@ const scrollToSection = (section) => {
   if (target?.value?.$el) {
     target.value.$el.scrollIntoView({ behavior: "smooth" });
   }
+};
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 </script>
 
@@ -125,5 +164,14 @@ const scrollToSection = (section) => {
 }
 .animate-pulse-slow {
   animation: pulseSlow 8s infinite ease-in-out;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
