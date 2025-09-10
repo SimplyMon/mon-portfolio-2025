@@ -3,16 +3,16 @@
     ref="productSection"
     class="bg-[#0D0D0D] min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden"
   >
+    <!-- Actual Content -->
     <transition name="fade-slide">
       <div
-        v-if="visible"
+        v-show="visible"
         class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center"
       >
         <div class="flex justify-center relative">
           <img
-            src="../../../../assets/images/case-study/problem.png"
+            src="../../../../assets/images/case-study/problem.svg"
             alt="Product Mockup"
-            loading="lazy"
             class="w-full max-w-md md:max-w-lg drop-shadow-2xl"
           />
         </div>
@@ -37,7 +37,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted } from "vue";
 
 const productSection = ref(null);
 const visible = ref(false);
@@ -52,17 +52,15 @@ onMounted(() => {
         }
       });
     },
-    { threshold: 0 }
+    { threshold: 0.2 }
   );
   if (productSection.value) observer.observe(productSection.value);
 });
-
-onUnmounted(() => {});
 </script>
 
 <style scoped>
 .fade-slide-enter-active {
-  transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all 3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .fade-slide-enter-from {
   opacity: 0;
