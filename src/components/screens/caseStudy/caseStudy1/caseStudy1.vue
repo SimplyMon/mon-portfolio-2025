@@ -14,7 +14,6 @@
       ></div>
     </div>
 
-    <!-- Content -->
     <transition name="fade-slide">
       <div
         v-show="showContent"
@@ -29,7 +28,7 @@
         </div>
 
         <div class="text-center md:text-left space-y-4 animate-stagger">
-          <h1 class="text-3xl md:text-5xl font-bold text-[#00D8FF]">
+          <h1 class="text-4xl md:text-5xl font-bold text-[#00D8FF]">
             Guardian Lock
           </h1>
           <h2 class="text-xl md:text-2xl font-semibold text-[#00D8FF]">
@@ -43,8 +42,8 @@
 
           <div class="pt-4">
             <button
-              class="bg-[#00D8FF] text-black font-medium px-6 py-2 rounded-md hover:bg-[#00c9e6] transition"
-              @click="scrollToCase1"
+              class="bg-[#00D8FF] text-black font-medium px-8 py-3 rounded-md hover:bg-[#00c9e6] transition"
+              @click="scrollToSection('case1Ref')"
             >
               Let's Get Started
             </button>
@@ -54,15 +53,21 @@
     </transition>
   </section>
 
-  <case1Section ref="case1Ref" />
+  <case1Section ref="case1Ref" @go-to="scrollToSection" />
+  <case2Section ref="case2Ref" />
+  <NotFound />
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
 import case1Section from "./case1.vue";
+import case2Section from "./case2.vue";
+
+import NotFound from "@/components/layout/NotFound.vue";
 
 const showContent = ref(false);
 const case1Ref = ref(null);
+const case2Ref = ref(null);
 
 onMounted(() => {
   setTimeout(() => {
@@ -70,9 +75,10 @@ onMounted(() => {
   }, 300);
 });
 
-const scrollToCase1 = () => {
-  if (case1Ref.value && case1Ref.value.$el) {
-    case1Ref.value.$el.scrollIntoView({ behavior: "smooth" });
+const scrollToSection = (section) => {
+  const target = { case1Ref, case2Ref }[section];
+  if (target?.value?.$el) {
+    target.value.$el.scrollIntoView({ behavior: "smooth" });
   }
 };
 </script>

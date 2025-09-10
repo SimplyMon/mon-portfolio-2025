@@ -68,7 +68,6 @@
               <a
                 v-if="project.caseStudy"
                 :href="project.caseStudy"
-                target="_blank"
                 class="bg-[#FD6F00] text-white px-4 py-2 rounded-md font-medium hover:bg-orange-600 transition"
               >
                 View Case Study
@@ -112,25 +111,27 @@ const projects = [
     title: "Guardian Lock",
     category: "Web based Smart Door Application",
     image: guardianLock,
-    caseStudy: "guardian-lock-case-study",
+    caseStudy: "/case-study/guardian-lock",
     livePreview: "https://guardian-lock.vercel.app/",
   },
   {
     title: "Diverse Oral Core",
     category: "Dental Clinic Platform",
     image: diverseWeb,
-    caseStudy: "diverse-oral-core-case-study",
+    caseStudy: "/case-study/diverse-oral-core",
     livePreview: "https://diverseoralcore.vercel.app/",
   },
   {
     title: "Lamesa Inasal POS System",
     category: "Web based Point Of Sale System",
     image: lamesaPos,
+    caseStudy: "/case-study/lamesa-inasal",
   },
   {
     title: "Lamesa Inasal Website",
     category: "Lamesa Website",
     image: lamesaWeb,
+    caseStudy: "/case-study/lamesa-inasal",
   },
   {
     title: "Bozriah POS",

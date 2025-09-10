@@ -8,6 +8,7 @@ import caseStudyScreen from "@/components/screens/caseStudy/main.vue";
 // Case Studies
 import caseStudy1 from "@/components/screens/caseStudy/caseStudy1/caseStudy1.vue";
 import caseStudy2 from "@/components/screens/caseStudy/caseStudy2/caseStudy2.vue";
+import caseStudy3 from "@/components/screens/caseStudy/caseStudy3/caseStudy3.vue";
 
 // 404
 import notFoundScreen from "@/components/layout/NotFound.vue";
@@ -41,9 +42,14 @@ const routes = [
     component: caseStudy1,
   },
   {
-    path: "/case-study/diverseoralcore-web",
+    path: "/case-study/lamesa-inasal",
     name: "caseStudy2",
     component: caseStudy2,
+  },
+  {
+    path: "/case-study/diverseoralcore-web",
+    name: "caseStudy3",
+    component: caseStudy3,
   },
   // 404
   {

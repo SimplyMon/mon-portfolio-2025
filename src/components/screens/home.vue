@@ -136,7 +136,7 @@
 
                 <!-- Discord -->
                 <a
-                  href="https://discord.com/users/yourprofile"
+                  href="https://discord.com/users/744076933007933520"
                   target="_blank"
                   class="hover:text-[#5865F2]"
                 >
