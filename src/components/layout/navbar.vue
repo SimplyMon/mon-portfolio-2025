@@ -34,7 +34,7 @@
           to="/case-study"
           class="flex items-center justify-center text-xs sm:text-base rounded-full transition-all duration-300 flex-shrink-0"
           :class="[
-            $route.path === '/case-study'
+            $route.path.startsWith('/case-study')
               ? 'bg-gradient-to-r from-[#FD6F00] to-orange-400 text-white shadow-md'
               : 'text-gray-200 hover:text-[#FD6F00]',
             isShrunk
@@ -106,10 +106,8 @@ const handleScroll = () => {
   const currentScroll = window.scrollY;
 
   if (currentScroll > lastScroll && currentScroll > 50) {
-    // Scrolling down
     isShrunk.value = true;
   } else if (currentScroll < lastScroll) {
-    // Scrolling up
     isShrunk.value = false;
   }
 
