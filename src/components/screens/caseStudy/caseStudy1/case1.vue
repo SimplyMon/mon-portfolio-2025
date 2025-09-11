@@ -65,7 +65,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import bgImage from "@/assets/images/case-study/users.png";
+import bgImage from "@/assets/images/case-study/we.webp";
 
 defineEmits(["go-to"]);
 
