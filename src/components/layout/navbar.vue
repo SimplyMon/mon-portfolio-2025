@@ -51,12 +51,12 @@
           class="flex items-center flex-shrink-0 transition-all duration-300"
         >
           <img
-            src="../../assets/images/logo.png"
+            src="../../assets/images/logo2.png"
             alt="Logo"
             class="object-contain transition-all duration-300 mx-4"
             :class="{
-              'w-6 sm:w-12': isShrunk,
-              'w-6 sm:w-20': !isShrunk,
+              'w-5 sm:w-7': isShrunk,
+              'w-6 sm:w-10': !isShrunk,
             }"
           />
         </router-link>
