@@ -3,7 +3,6 @@
     ref="productSection"
     class="bg-[#0D0D0D] min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden"
   >
-    <!-- Actual Content -->
     <transition name="fade-slide">
       <div
         v-show="visible"

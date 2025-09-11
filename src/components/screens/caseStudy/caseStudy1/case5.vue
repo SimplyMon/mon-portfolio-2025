@@ -3,13 +3,12 @@
     ref="productSection"
     class="bg-[#0D0D0D] min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden"
   >
-    <!-- Actual Content -->
     <transition name="fade-slide">
       <div
         v-show="visible"
-        class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center"
+        class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12"
       >
-        <div class="space-y-6">
+        <div class="md:flex-1 space-y-6">
           <h2 class="text-4xl md:text-5xl font-extrabold text-[#00D8FF]">
             The Goal
           </h2>
@@ -22,8 +21,7 @@
             maintenance needs so the system is always ready when you need it.
           </p>
         </div>
-
-        <div class="flex justify-center relative">
+        <div class="flex justify-center relative md:flex-1">
           <img
             src="../../../../assets/images/case-study/goal.svg"
             alt="Product Mockup"
