@@ -51,7 +51,7 @@
 
         <span
           class="relative group px-4 cursor-pointer transition transform hover:scale-110 hover:text-[#00D8FF]"
-          @click="$emit('go-to', 'case5Ref')"
+          @click="$emit('go-to', 'case9Ref')"
         >
           Ideation
           <span

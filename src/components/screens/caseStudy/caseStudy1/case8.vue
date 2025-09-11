@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[#0D0D0D] py-20 px-6">
+  <section class="bg-[#0D0D0D] py-20 pb-36 px-6">
     <div class="max-w-5xl mx-auto relative">
       <h2
         class="text-center text-4xl md:text-5xl font-extrabold text-[#00D8FF] mb-10"

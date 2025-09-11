@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[#0D0D0D] text-white py-16">
+  <section class="bg-[#0D0D0D] text-[#F1FAEE] py-16">
     <div class="max-w-5xl mx-auto text-center px-6">
       <!-- Title -->
       <h2

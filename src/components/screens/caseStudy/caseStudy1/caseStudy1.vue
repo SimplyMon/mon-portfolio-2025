@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative bg-[#0D0D0D] text-white min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden"
+    class="relative bg-[#0D0D0D] text-[#F1FAEE] min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden"
   >
     <div
       class="absolute inset-0 -z-20 bg-gradient-to-tr from-[#001F2D] via-[#002B40] to-[#001F2D]"
@@ -61,10 +61,13 @@
   <case6Section ref="case6Ref" @go-to="scrollToSection" />
   <case7Section ref="case7Ref" />
   <case8Section ref="case8Ref" />
+  <case9Section ref="case9Ref" />
+  <case10Section ref="case10Ref" />
+  <case11Section ref="case11Ref" />
+  <case12Section ref="case12Ref" />
 
   <NotFound />
 
-  <!-- Scroll to Top Button -->
   <transition name="fade">
     <button
       v-show="showScrollTop"
@@ -100,6 +103,10 @@ import case5Section from "./case5.vue";
 import case6Section from "./case6.vue";
 import case7Section from "./case7.vue";
 import case8Section from "./case8.vue";
+import case9Section from "./case9.vue";
+import case10Section from "./case10.vue";
+import case11Section from "./case11.vue";
+import case12Section from "./case12.vue";
 
 import NotFound from "@/components/layout/NotFound.vue";
 
@@ -112,6 +119,7 @@ const case5Ref = ref(null);
 const case6Ref = ref(null);
 const case7Ref = ref(null);
 const case8Ref = ref(null);
+const case9Ref = ref(null);
 const showScrollTop = ref(false);
 
 onMounted(() => {
@@ -140,6 +148,7 @@ const scrollToSection = (section) => {
     case6Ref,
     case7Ref,
     case8Ref,
+    case9Ref,
   }[section];
   if (target?.value?.$el) {
     target.value.$el.scrollIntoView({ behavior: "smooth" });
