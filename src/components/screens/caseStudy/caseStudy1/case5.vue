@@ -5,10 +5,10 @@
   >
     <transition name="fade-slide">
       <div
-        v-if="visible"
-        class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center"
+        v-show="visible"
+        class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12"
       >
-        <div class="space-y-6">
+        <div class="md:flex-1 space-y-6">
           <h2 class="text-4xl md:text-5xl font-extrabold text-[#00D8FF]">
             The Goal
           </h2>
@@ -21,11 +21,10 @@
             maintenance needs so the system is always ready when you need it.
           </p>
         </div>
-        <div class="flex justify-center relative">
+        <div class="flex justify-center relative md:flex-1">
           <img
-            src="../../../../assets/images/case-study/goal.png"
+            src="../../../../assets/images/case-study/goal.svg"
             alt="Product Mockup"
-            loading="lazy"
             class="w-full max-w-md md:max-w-lg drop-shadow-2xl"
           />
         </div>
@@ -35,7 +34,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted } from "vue";
 
 const productSection = ref(null);
 const visible = ref(false);
@@ -50,17 +49,15 @@ onMounted(() => {
         }
       });
     },
-    { threshold: 0 }
+    { threshold: 0.2 }
   );
   if (productSection.value) observer.observe(productSection.value);
 });
-
-onUnmounted(() => {});
 </script>
 
 <style scoped>
 .fade-slide-enter-active {
-  transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all 3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .fade-slide-enter-from {
   opacity: 0;

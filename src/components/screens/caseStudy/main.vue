@@ -14,7 +14,7 @@
           v-for="(project, index) in projects"
           :key="index"
           class="relative group overflow-hidden rounded-2xl shadow-lg w-80 cursor-pointer"
-          @click="toggleOverlay(index)"
+          @click="project.status === 'up' ? toggleOverlay(index) : null"
         >
           <!-- DOT -->
           <span
@@ -29,19 +29,26 @@
             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
           />
 
+          <!-- Overlay -->
           <div
             class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            :class="{
-              'opacity-100': activeIndex === index,
-            }"
+            :class="{ 'opacity-100': activeIndex === index }"
           >
             <router-link
+              v-if="project.status === 'up'"
               :to="project.route"
               class="bg-[#FD6F00] text-[#F1FAEE] px-6 py-2 rounded-md font-semibold hover:bg-orange-600 transition"
               @click.stop
             >
               View Case Study
             </router-link>
+
+            <span
+              v-else
+              class="bg-gray-500 text-gray-300 px-6 py-2 rounded-md font-semibold cursor-not-allowed"
+            >
+              In Progress
+            </span>
           </div>
 
           <div class="absolute bottom-4 left-4">

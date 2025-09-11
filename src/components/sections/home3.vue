@@ -68,7 +68,7 @@
               <a
                 v-if="project.caseStudy"
                 :href="project.caseStudy"
-                class="bg-[#FD6F00] text-white px-4 py-2 rounded-md font-medium hover:bg-orange-600 transition"
+                class="bg-[#FD6F00] text-[#F1FAEE] px-4 py-2 rounded-md font-medium hover:bg-orange-600 transition"
               >
                 View Case Study
               </a>
