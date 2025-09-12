@@ -125,7 +125,7 @@ import phpLogo from "@/assets/images/tech/php-plain.png";
 import cppLogo from "@/assets/images/tech/cplusplus-plain.png";
 import javaLogo from "@/assets/images/tech/java-original.png";
 import pythonLogo from "@/assets/images/tech/python-original.png";
-import csharpLogo from "@/assets/images/tech/csharp-plain.png";
+import typescriptLogo from "@/assets/images/tech/typescript-plain.png";
 import jsLogo from "@/assets/images/tech/javascript-original.png";
 import htmlLogo from "@/assets/images/tech/html5-plain.png";
 import cssLogo from "@/assets/images/tech/css3-plain.png";
@@ -161,7 +161,7 @@ const languages = ref([
   cppLogo,
   javaLogo,
   pythonLogo,
-  csharpLogo,
+  typescriptLogo,
   jsLogo,
   htmlLogo,
   cssLogo,
