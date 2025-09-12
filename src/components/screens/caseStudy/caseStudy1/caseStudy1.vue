@@ -65,8 +65,10 @@
   <case10Section ref="case10Ref" />
   <case11Section ref="case11Ref" />
   <case12Section ref="case12Ref" />
-
-  <NotFound />
+  <case13Section ref="case13Ref" />
+  <case14Section ref="case14Ref" />
+  <case15Section ref="case15Ref" />
+  <case16Section ref="case16Ref" />
 
   <transition name="fade">
     <button
@@ -107,6 +109,10 @@ import case9Section from "./case9.vue";
 import case10Section from "./case10.vue";
 import case11Section from "./case11.vue";
 import case12Section from "./case12.vue";
+import case13Section from "./case13.vue";
+import case14Section from "./case14.vue";
+import case15Section from "./case15.vue";
+import case16Section from "./case16.vue";
 
 import NotFound from "@/components/layout/NotFound.vue";
 
