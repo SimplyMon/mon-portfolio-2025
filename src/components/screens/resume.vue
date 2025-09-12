@@ -30,14 +30,17 @@
         </h2>
         <ul class="space-y-2 text-[#F1FAEE]">
           <li>
-            <strong>Languages:</strong> HTML, CSS, JavaScript, PHP, Java,
-            Python, C++, C#
+            <strong>Languages:</strong> HTML, CSS, JavaScript, TypeScript, PHP,
+            Java, Python, C++
           </li>
           <li>
-            <strong>Frameworks & Libraries:</strong> Vue.js, React.js, Tailwind
-            CSS, Bootstrap
+            <strong>Frameworks & Libraries:</strong> Vue.js, React.js, Next.js,
+            Express.js, Laravel, Tailwind CSS, Bootstrap
           </li>
-          <li><strong>Databases:</strong> MySQL, Firebase, MongoDB, MS SQL</li>
+          <li>
+            <strong>Databases:</strong> MySQL, MS SQL, PostgreSQL, Firebase,
+            MongoDB
+          </li>
           <li><strong>Developer Tools:</strong> Git, GitHub, VS Code</li>
         </ul>
       </section>
