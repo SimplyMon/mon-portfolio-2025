@@ -130,7 +130,7 @@ const currentStep = ref(0);
 
 const steps = ref([
   {
-    title: "Guardian Lock App | Digital Wireframe",
+    title: "ock App | Digital Wireframe",
     short: "Wireframe",
     images: [wire1, wire2, wire3, wire4, wire5, wire6],
   },
