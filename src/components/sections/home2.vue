@@ -1,6 +1,6 @@
 <template>
   <section
-    class="bg-[#0D0D0D] text-[#F1FAEE] px-6 pt-16 flex items-center justify-center"
+    class="bg-[#0D0D0D] text-[#F1FAEE] px-6 pt-16 md:pt-32 flex items-center justify-center"
   >
     <div class="max-w-5xl w-full mx-auto text-center mt-20 mb-20 lg:mt-0">
       <div class="group text-center inline-block">

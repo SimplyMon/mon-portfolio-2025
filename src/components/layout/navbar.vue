@@ -6,7 +6,7 @@
       'py-5 md:py-5': !isShrunk,
     }"
   >
-    <div class="max-w-6xl mx-auto flex justify-center px-2 sm:px-4">
+    <div class="max-w-5xl mx-auto flex justify-center px-2 sm:px-4">
       <div
         class="flex flex-nowrap items-center justify-center gap-1.5 sm:gap-3.5 px-1 sm:px-3.5 py-1.5 border-3 border-white/20 rounded-full backdrop-blur-lg shadow-lg whitespace-nowrap transition-all duration-300"
         :class="{

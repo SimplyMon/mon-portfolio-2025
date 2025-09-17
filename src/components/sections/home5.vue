@@ -1,6 +1,6 @@
 <template>
   <section class="bg-gray-900 text-[#F1FAEE] py-28">
-    <div class="max-w-3xl mx-auto px-6 text-center">
+    <div class="max-w-5xl mx-auto px-6 text-center">
       <!-- Title -->
       <h2
         ref="titleRef"

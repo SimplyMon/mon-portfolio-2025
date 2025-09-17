@@ -34,7 +34,7 @@
             class="min-w-full px-6"
           >
             <div
-              class="bg-gray-900 rounded-2xl shadow-lg p-8 md:p-10 max-w-3xl mx-auto"
+              class="bg-gray-900 rounded-lg shadow-lg p-8 md:p-10 max-w-3xl mx-auto"
             >
               <p class="text-lg md:text-xl text-gray-300 italic mb-6">
                 "{{ t.feedback }}"
