@@ -1,20 +1,40 @@
 <template>
-  <section class="bg-[#0D0D0D] text-[#F1FAEE] py-20 px-6 md:pt-48 md:pb-60">
+  <section
+    class="bg-[#0D0D0D] text-[#F1FAEE] py-20 px-6 md:pt-48 md:pb-60 overflow-hidden"
+  >
     <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold">
-        Case <span class="text-[#FD6F00]">Studies</span>
-      </h2>
-      <p class="text-gray-400 mt-2">
-        In-depth looks at how I approach and deliver successful projects
-      </p>
+      <!-- Section Title -->
+      <transition
+        appear
+        enter-active-class="transition duration-[1200ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]"
+        enter-from-class="opacity-0 translate-y-6"
+        enter-to-class="opacity-100 translate-y-0"
+      >
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold">
+            Case <span class="text-[#FD6F00]">Studies</span>
+          </h2>
+          <p class="text-gray-400 mt-2">
+            In-depth looks at how I approach and deliver successful projects
+          </p>
+        </div>
+      </transition>
 
       <!-- Projects -->
-      <div class="flex flex-wrap justify-center gap-8 mt-12">
+      <TransitionGroup
+        tag="div"
+        class="flex flex-wrap justify-center gap-8 mt-12"
+        appear
+        enter-active-class="transition duration-[1000ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+        enter-from-class="opacity-0 scale-95 translate-y-4"
+        enter-to-class="opacity-100 scale-100 translate-y-0"
+      >
         <div
           v-for="(project, index) in projects"
-          :key="index"
+          :key="project.title"
           class="relative group overflow-hidden rounded-2xl shadow-lg w-80 cursor-pointer"
           @click="project.status === 'up' ? toggleOverlay(index) : null"
+          :style="{ transitionDelay: `${index * 200}ms` }"
         >
           <!-- DOT -->
           <span
@@ -26,12 +46,12 @@
           <img
             :src="project.image"
             :alt="project.title"
-            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+            class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
           />
 
           <!-- Overlay -->
           <div
-            class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
             :class="{ 'opacity-100': activeIndex === index }"
           >
             <router-link
@@ -55,7 +75,7 @@
             <h3 class="text-lg font-bold">{{ project.title }}</h3>
           </div>
         </div>
-      </div>
+      </TransitionGroup>
     </div>
   </section>
 </template>

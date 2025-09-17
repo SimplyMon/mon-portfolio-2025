@@ -1,6 +1,6 @@
 <template>
   <section
-    class="bg-[#0D0D0D] min-h-screen flex items-center justify-center py-20 px-6 md:pt-36 md:pb-60"
+    class="bg-[#0D0D0D] min-h-screen flex items-center justify-center py-20 px-6 md:pt-48 md:pb-60"
   >
     <div class="max-w-5xl w-full mx-auto grid md:grid-cols-2 gap-12">
       <!-- Contact Info -->
