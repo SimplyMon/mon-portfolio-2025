@@ -16,7 +16,7 @@
         <div class="space-y-6">
           <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl">
             <h3 class="text-lg font-bold">Full-Stack Developer Intern</h3>
-            <p class="text-gray-400 text-sm mt-1">Jan 2025 – Jun 2025</p>
+            <p class="text-gray-400 text-sm mt-1">January – June 2025</p>
             <p class="mt-5 text-sm text-gray-300 leading-relaxed">
               Developed
               <span class="text-[#FD6F00]">POS and kiosk features</span>
