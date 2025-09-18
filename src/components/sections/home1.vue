@@ -52,7 +52,7 @@
           </p>
           <p class="text-gray-400 text-sm">2022 – 2025</p>
           <p class="text-gray-300 text-sm md:text-[16px] mt-2">
-            <span class="text-[#FD6F00]">GWA</span> 1.81
+            <span class="text-[#FD6F00]">GWA</span> 1.86
           </p>
           <p class="text-gray-300 text-sm md:text-[16px] mt-2">
             <span class="text-[#FD6F00]">IIARL.org:</span> Presented and
