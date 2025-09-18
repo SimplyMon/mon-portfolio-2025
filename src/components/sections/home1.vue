@@ -16,14 +16,16 @@
         <div class="space-y-6">
           <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl">
             <h3 class="text-lg font-bold">Full-Stack Developer Intern</h3>
-            <p class="text-gray-400 text-sm mt-1">Jan 2025 – Jun 2025</p>
-            <p class="mt-5 text-sm text-gray-300 leading-relaxed">
+            <p class="text-gray-400 text-sm mt-1">January – June 2025</p>
+            <p
+              class="mt-5 text-sm md:text-[16px] text-gray-300 leading-relaxed"
+            >
               Developed
               <span class="text-[#FD6F00]">POS and kiosk features</span>
               used daily by staff and customers. Improved stability by debugging
               and optimizing the codebase. Designed intuitive web UIs that
-              reduced booking time and transaction errors. Gaining hands on
-              experience in server side Development
+              reduced booking time and transaction errors. Gaining experience in
+              server side Development
             </p>
           </div>
         </div>
@@ -49,18 +51,18 @@
             Jesus Reigns Christian College
           </p>
           <p class="text-gray-400 text-sm">2022 – 2025</p>
-          <p class="text-gray-300 text-sm mt-2">
-            <span class="text-[#FD6F00]">GWA</span> 1.81
+          <p class="text-gray-300 text-sm md:text-[16px] mt-2">
+            <span class="text-[#FD6F00]">GWA</span> 1.86
           </p>
-          <p class="text-gray-300 text-sm mt-2">
+          <p class="text-gray-300 text-sm md:text-[16px] mt-2">
             <span class="text-[#FD6F00]">IIARL.org:</span> Presented and
             published a Thesis paper
           </p>
-          <p class="text-gray-300 text-sm mt-2">
+          <p class="text-gray-300 text-sm md:text-[16px] mt-2">
             <span class="text-[#FD6F00]">Design.Ed.ph:</span> Graphic Design
             Foundation Bootcamp
           </p>
-          <p class="text-gray-300 text-sm mt-2">
+          <p class="text-gray-300 text-sm md:text-[16px] mt-2">
             <span class="text-[#FD6F00]">UI/UX Oasis:</span> Figma Masterclass
           </p>
         </div>
