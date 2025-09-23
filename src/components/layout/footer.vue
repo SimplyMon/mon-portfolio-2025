@@ -42,14 +42,26 @@
         </div>
 
         <div class="flex space-x-6 mt-4 md:mt-0">
-          <a href="#" class="text-gray-400 hover:text-white transition-colors">
-            <i class="fab fa-twitter fa-lg"></i>
+          <a
+            href="https://www.facebook.com/simon.pasag.30"
+            target="_blank"
+            class="text-gray-400 hover:text-white transition-colors"
+          >
+            <i class="fab fa-facebook fa-lg"></i>
           </a>
-          <a href="#" class="text-gray-400 hover:text-white transition-colors">
-            <i class="fab fa-github fa-lg"></i>
-          </a>
-          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+          <a
+            href="https://www.linkedin.com/in/simon-expression-pasag-85b1112b7/"
+            target="_blank"
+            class="text-gray-400 hover:text-white transition-colors"
+          >
             <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+          <a
+            href="https://github.com/SimplyMon"
+            target="_blank"
+            class="text-gray-400 hover:text-white transition-colors"
+          >
+            <i class="fab fa-github fa-lg"></i>
           </a>
         </div>
       </div>
