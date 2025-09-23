@@ -3,7 +3,6 @@
     class="bg-[#0D0D0D] min-h-screen flex items-center justify-center py-20 px-6 md:pt-40 md:pb-60"
   >
     <div class="max-w-5xl w-full mx-auto grid md:grid-cols-2 gap-12">
-      <!-- Contact Info -->
       <div class="flex flex-col justify-center space-y-6">
         <h2 class="text-4xl font-bold text-[#F1FAEE]">Get in Touch</h2>
         <p class="text-gray-300">
@@ -12,7 +11,6 @@
         </p>
 
         <div class="space-y-4">
-          <!-- Email -->
           <div class="flex items-center space-x-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +33,6 @@
             >
           </div>
 
-          <!-- Phone -->
           <div class="flex items-center space-x-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +55,6 @@
             >
           </div>
 
-          <!-- LinkedIn -->
           <div class="flex items-center space-x-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +74,6 @@
             >
           </div>
 
-          <!-- GitHub -->
           <div class="flex items-center space-x-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +95,6 @@
         </div>
       </div>
 
-      <!-- Contact Form -->
       <form
         class="bg-gray-900 shadow-lg rounded-lg p-8 space-y-6"
         @submit.prevent="submitForm"
