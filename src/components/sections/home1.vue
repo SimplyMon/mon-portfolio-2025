@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[#0D0D0D] text-[#F1FAEE] px-6 py-32 border-t-2">
+  <section class="bg-[#0D0D0D] text-[#F1FAEE] px-6 py-16">
     <div ref="wrapperRef" class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
       <div
         :class="[

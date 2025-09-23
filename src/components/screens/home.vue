@@ -6,7 +6,6 @@
     <div
       class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-16"
     >
-      <!-- Image -->
       <div class="relative flex-shrink-0 flex justify-center md:justify-start">
         <!-- Circle Skeleton -->
         <div
@@ -14,7 +13,6 @@
           class="w-52 sm:w-56 md:w-80 h-72 sm:h-72 md:h-96 rounded-full bg-gray-700 animate-pulse"
         ></div>
 
-        <!-- Real Image -->
         <img
           v-show="imageLoaded"
           src="../../assets/images/hero1.png"
@@ -24,27 +22,21 @@
         />
       </div>
 
-      <!-- Text -->
       <div class="flex-1 text-center md:text-left space-y-4">
         <!-- Skeleton layout -->
         <div v-if="!textLoaded" class="space-y-4">
-          <!-- Name -->
           <div
             class="mx-auto md:mx-0 w-3/4 h-10 bg-gray-700 rounded animate-pulse"
           ></div>
-          <!-- Subtitle -->
           <div
             class="mx-auto md:mx-0 w-1/2 h-6 bg-gray-700 rounded animate-pulse"
           ></div>
-          <!-- Paragraph -->
           <div
             class="mx-auto md:mx-0 w-full lg:w-96 max-w-md md:max-w-lg h-20 bg-gray-700 rounded animate-pulse"
           ></div>
-          <!-- Button -->
           <div
             class="mx-auto md:mx-0 w-40 h-12 bg-gray-700 rounded-lg animate-pulse"
           ></div>
-          <!-- Social icons -->
           <div class="flex justify-center md:justify-start space-x-4 pt-4">
             <div class="w-6 h-6 bg-gray-700 rounded-full animate-pulse"></div>
             <div class="w-6 h-6 bg-gray-700 rounded-full animate-pulse"></div>
@@ -53,7 +45,6 @@
           </div>
         </div>
 
-        <!-- Real text -->
         <transition appear name="fade-slide" mode="out-in">
           <div v-if="textLoaded">
             <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
@@ -79,7 +70,6 @@
 
               <!-- Contact Icons -->
               <div class="mt-5 flex space-x-4">
-                <!-- LinkedIn -->
                 <a
                   href="https://www.linkedin.com/in/simon-expression-pasag-85b1112b7/"
                   target="_blank"
@@ -93,7 +83,6 @@
                   </span>
                 </a>
 
-                <!-- Facebook -->
                 <a
                   href="https://www.facebook.com/simon.pasag.30"
                   target="_blank"
@@ -107,7 +96,6 @@
                   </span>
                 </a>
 
-                <!-- GitHub -->
                 <a
                   href="https://github.com/SimplyMon"
                   target="_blank"
@@ -121,7 +109,6 @@
                   </span>
                 </a>
 
-                <!-- Discord -->
                 <a
                   href="https://discord.com/users/744076933007933520"
                   target="_blank"
@@ -141,13 +128,12 @@
       </div>
     </div>
   </section>
+  <home3 />
   <home1 />
   <home2 />
-  <home3 />
   <home4 />
   <home5 />
 
-  <!-- Scroll to Top Button -->
   <button
     v-show="showScrollTop"
     @click="scrollToTop"
