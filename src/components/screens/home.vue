@@ -1,4 +1,4 @@
-<!-- this is version1 -->
+<!-- this is version2 -->
 <template>
   <section
     class="bg-[#0D0D0D] text-[#F1FAEE] px-6 min-h-screen flex items-center justify-center"
