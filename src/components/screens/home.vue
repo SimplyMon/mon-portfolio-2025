@@ -55,8 +55,8 @@
             </p>
 
             <p class="mt-6 max-w-md md:max-w-lg text-[#D7EAD9] mx-auto md:mx-0">
-              I build responsive websites where clean design meets clean code.
-              Turning Ideas Into Interactive Web Experiences.
+              I craft responsive websites where clean design meets clean code.
+              Turning ideas into pixel-perfect Web experiences.
             </p>
 
             <div class="mt-8 flex flex-col items-center md:items-start">
@@ -155,7 +155,7 @@
     </svg>
   </button>
 </template>
-`
+
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import home1 from "../sections/home1.vue";
