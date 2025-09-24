@@ -9,14 +9,14 @@
       <div class="relative flex-shrink-0 flex justify-center md:justify-start">
         <div
           v-if="!imageLoaded"
-          class="w-52 sm:w-56 md:w-80 h-72 sm:h-72 md:h-96 rounded-full bg-gray-700 animate-pulse"
+          class="w-60 h-60 md:h-80 md:w-80 rounded-full bg-gray-700 animate-pulse"
         ></div>
 
         <img
           v-show="imageLoaded"
           src="../../assets/images/hero.png"
           alt="Profile"
-          class="relative w-52 sm:w-56 md:w-80 h-auto rounded-full object-cover shadow-lg"
+          class="relative w-60 md:w-80 h-auto rounded-full object-cover shadow-lg"
           @load="onImageLoad"
         />
       </div>
