@@ -23,7 +23,7 @@
       </h2>
 
       <div
-        class="flex flex-wrap justify-center items-center gap-6 text-[#F1FAEE] text-lg font-medium"
+        class="flex flex-wrap justify-center items-center gap-6 text-[#D7EAD9] text-lg font-medium"
       >
         <span
           class="relative group px-4 cursor-pointer transition transform hover:scale-110 hover:text-[#00D8FF]"

@@ -4,7 +4,7 @@
   >
     <div class="max-w-5xl w-full mx-auto grid md:grid-cols-2 gap-12">
       <div class="flex flex-col justify-center space-y-6">
-        <h2 class="text-4xl font-bold text-[#F1FAEE]">Get in Touch</h2>
+        <h2 class="text-4xl font-bold text-[#D7EAD9]">Get in Touch</h2>
         <p class="text-gray-300">
           I'm open to questions, collaborations, or job opportunities. Reach out
           and let's create something great together.
@@ -107,7 +107,7 @@
             type="text"
             id="name"
             v-model="form.name"
-            class="w-full px-4 py-2 border border-gray-600 rounded-lg bg-gray-700 text-[#F1FAEE] focus:ring-2 focus:ring-[#FD6F00] focus:outline-none"
+            class="w-full px-4 py-2 border border-gray-600 rounded-lg bg-gray-700 text-[#D7EAD9] focus:ring-2 focus:ring-[#FD6F00] focus:outline-none"
             required
           />
         </div>
@@ -119,7 +119,7 @@
             type="email"
             id="email"
             v-model="form.email"
-            class="w-full px-4 py-2 border border-gray-600 rounded-lg bg-gray-700 text-[#F1FAEE] focus:ring-2 focus:ring-[#FD6F00] focus:outline-none"
+            class="w-full px-4 py-2 border border-gray-600 rounded-lg bg-gray-700 text-[#D7EAD9] focus:ring-2 focus:ring-[#FD6F00] focus:outline-none"
             required
           />
         </div>
@@ -131,20 +131,20 @@
             id="message"
             v-model="form.message"
             rows="5"
-            class="w-full px-4 py-2 border border-gray-600 rounded-lg bg-gray-700 text-[#F1FAEE] focus:ring-2 focus:ring-[#FD6F00] focus:outline-none"
+            class="w-full px-4 py-2 border border-gray-600 rounded-lg bg-gray-700 text-[#D7EAD9] focus:ring-2 focus:ring-[#FD6F00] focus:outline-none"
             required
           ></textarea>
         </div>
         <button
           type="submit"
-          class="w-full bg-[#FD6F00] text-[#F1FAEE] font-semibold py-3 rounded-lg hover:bg-[#e65a00] transition flex items-center justify-center"
+          class="w-full bg-[#FD6F00] text-[#D7EAD9] font-semibold py-3 rounded-lg hover:bg-[#e65a00] transition flex items-center justify-center"
           :disabled="loading"
         >
           <span v-if="!loading">Send Message</span>
           <span v-else class="flex items-center gap-2">
             Sending
             <svg
-              class="animate-spin h-5 w-5 text-[#F1FAEE]"
+              class="animate-spin h-5 w-5 text-[#D7EAD9]"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"

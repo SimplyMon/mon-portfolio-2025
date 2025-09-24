@@ -12,7 +12,7 @@
           <h2 class="text-4xl md:text-5xl font-extrabold text-[#00D8FF]">
             The Goal
           </h2>
-          <p class="text-[#F1FAEE] text-lg leading-relaxed">
+          <p class="text-[#D7EAD9] text-lg leading-relaxed">
             The goal is to build a smart lock that makes home security
             effortless and dependable for everyone. It will let you set
             different access levels for family and guests, use advanced

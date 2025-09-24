@@ -12,7 +12,7 @@
           <h2 class="text-4xl md:text-5xl font-extrabold text-[#00D8FF]">
             The Product
           </h2>
-          <p class="text-[#F1FAEE] text-lg leading-relaxed">
+          <p class="text-[#D7EAD9] text-lg leading-relaxed">
             A smart door lock platform built with a web dashboard and mobile UI
             interface. The system allows users to manage access, monitor
             activity, and control locks remotely in real time. Designed for

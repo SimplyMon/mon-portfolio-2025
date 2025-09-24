@@ -4,7 +4,7 @@
       <h2
         class="text-center text-4xl md:text-5xl font-extrabold text-[#00D8FF] mb-10"
       >
-        User <span class="text-[#F1FAEE]">Persona</span>
+        User <span class="text-[#D7EAD9]">Persona</span>
       </h2>
 
       <div
@@ -27,7 +27,7 @@
                 class="w-full h-full object-cover"
               />
             </div>
-            <div class="w-full md:w-2/3 p-6 md:p-8 text-[#F1FAEE]">
+            <div class="w-full md:w-2/3 p-6 md:p-8 text-[#D7EAD9]">
               <h2 class="text-3xl md:text-4xl font-extrabold text-[#00D8FF]">
                 Alex
               </h2>
@@ -81,7 +81,7 @@
                 class="w-full h-full object-cover"
               />
             </div>
-            <div class="w-full md:w-2/3 p-6 md:p-8 text-[#F1FAEE]">
+            <div class="w-full md:w-2/3 p-6 md:p-8 text-[#D7EAD9]">
               <h2 class="text-3xl md:text-4xl font-extrabold text-[#00D8FF]">
                 Maria
               </h2>

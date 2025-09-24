@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-[#0D0D0D] text-[#F1FAEE] py-10 border-t border-gray-700">
+  <footer class="bg-[#0D0D0D] text-[#D7EAD9] py-10 border-t border-gray-700">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div
         class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8"
@@ -13,8 +13,8 @@
             class="h-16 w-16 rounded-full object-cover"
           />
           <div class="flex flex-col">
-            <h2 class="text-2xl font-bold text-[#F1FAEE]">MON DEV</h2>
-            <p class="text-sm text-[#F1FAEE]">Web Developer • UI/UX Designer</p>
+            <h2 class="text-2xl font-bold text-[#D7EAD9]">MON DEV</h2>
+            <p class="text-sm text-[#D7EAD9]">Web Developer • UI/UX Designer</p>
           </div>
         </div>
 
@@ -45,21 +45,21 @@
           <a
             href="https://www.facebook.com/simon.pasag.30"
             target="_blank"
-            class="text-gray-400 hover:text-white transition-colors"
+            class="text-[#A6B9A8] hover:text-white transition-colors"
           >
             <i class="fab fa-facebook fa-lg"></i>
           </a>
           <a
             href="https://www.linkedin.com/in/simon-expression-pasag-85b1112b7/"
             target="_blank"
-            class="text-gray-400 hover:text-white transition-colors"
+            class="text-[#A6B9A8] hover:text-white transition-colors"
           >
             <i class="fab fa-linkedin fa-lg"></i>
           </a>
           <a
             href="https://github.com/SimplyMon"
             target="_blank"
-            class="text-gray-400 hover:text-white transition-colors"
+            class="text-[#A6B9A8] hover:text-white transition-colors"
           >
             <i class="fab fa-github fa-lg"></i>
           </a>

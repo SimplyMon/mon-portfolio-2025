@@ -20,7 +20,7 @@
           class="flex items-center justify-center text-xs sm:text-base rounded-full transition-all duration-300 flex-shrink-0"
           :class="[
             $route.path === '/'
-              ? 'bg-gradient-to-r from-[#FD6F00] to-orange-400 text-white shadow-md'
+              ? 'bg-gradient-to-r from-[#FD6F00] to-orange-400 text-[#D7EAD9] shadow-md'
               : 'text-gray-200 hover:text-[#FD6F00]',
             isShrunk
               ? 'h-6 sm:h-8 w-16 sm:w-24 px-1 sm:px-3'
@@ -35,7 +35,7 @@
           class="flex items-center justify-center text-xs sm:text-base rounded-full transition-all duration-300 flex-shrink-0"
           :class="[
             $route.path.startsWith('/case-study')
-              ? 'bg-gradient-to-r from-[#FD6F00] to-orange-400 text-white shadow-md'
+              ? 'bg-gradient-to-r from-[#FD6F00] to-orange-400 text-[#D7EAD9] shadow-md'
               : 'text-gray-200 hover:text-[#FD6F00]',
             isShrunk
               ? 'h-6 sm:h-8 w-16 sm:w-24 px-1 sm:px-3'
@@ -67,7 +67,7 @@
           class="flex items-center justify-center text-xs sm:text-base rounded-full transition-all duration-300 flex-shrink-0"
           :class="[
             $route.path === '/resume'
-              ? 'bg-gradient-to-r from-[#FD6F00] to-orange-400 text-white shadow-md'
+              ? 'bg-gradient-to-r from-[#FD6F00] to-orange-400 text-[#D7EAD9] shadow-md'
               : 'text-gray-200 hover:text-[#FD6F00]',
             isShrunk
               ? 'h-6 sm:h-8 w-16 sm:w-24 px-1 sm:px-3'
@@ -82,7 +82,7 @@
           class="flex items-center justify-center text-xs sm:text-base rounded-full transition-all duration-300 flex-shrink-0"
           :class="[
             $route.path === '/contacts'
-              ? 'bg-gradient-to-r from-[#FD6F00] to-orange-400 text-white shadow-md'
+              ? 'bg-gradient-to-r from-[#FD6F00] to-orange-400 text-[#D7EAD9] shadow-md'
               : 'text-gray-200 hover:text-[#FD6F00]',
             isShrunk
               ? 'h-6 sm:h-8 w-16 sm:w-24 px-1 sm:px-3'

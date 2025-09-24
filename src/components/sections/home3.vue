@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[#0D0D0D] text-[#F1FAEE] px-6 py-32 border-t-2">
+  <section class="bg-[#0D0D0D] text-[#D7EAD9] px-6 py-32 border-t-2">
     <div class="max-w-5xl mx-auto text-center">
       <h2
         ref="titleRef"
@@ -16,7 +16,7 @@
       <p
         ref="descRef"
         :class="[
-          'relative text-gray-400 mt-2 inline-block cursor-pointer transition-all duration-1000 ease-out delay-300',
+          'relative text-[#A6B9A8] mt-2 inline-block cursor-pointer transition-all duration-1000 ease-out delay-300',
           isVisible.desc
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-10',
@@ -68,7 +68,7 @@
               <a
                 v-if="project.caseStudy"
                 :href="project.caseStudy"
-                class="bg-[#FD6F00] text-[#F1FAEE] px-4 py-2 rounded-md font-medium hover:bg-orange-600 transition"
+                class="bg-[#FD6F00] text-[#D7EAD9] px-4 py-2 rounded-md font-medium hover:bg-orange-600 transition"
               >
                 View Case Study
               </a>

@@ -1,13 +1,12 @@
-<!-- this is version1 -->
+<!-- this is version2 -->
 <template>
   <section
-    class="bg-[#0D0D0D] text-[#F1FAEE] px-6 min-h-screen flex items-center justify-center"
+    class="bg-[#0D0D0D] text-[#D7EAD9] px-6 min-h-screen flex items-center justify-center"
   >
     <div
       class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-16"
     >
       <div class="relative flex-shrink-0 flex justify-center md:justify-start">
-        <!-- Circle Skeleton -->
         <div
           v-if="!imageLoaded"
           class="w-52 sm:w-56 md:w-80 h-72 sm:h-72 md:h-96 rounded-full bg-gray-700 animate-pulse"
@@ -15,7 +14,7 @@
 
         <img
           v-show="imageLoaded"
-          src="../../assets/images/hero1.png"
+          src="../../assets/images/hero.png"
           alt="Profile"
           class="relative w-52 sm:w-56 md:w-80 h-auto rounded-full object-cover shadow-lg"
           @load="onImageLoad"
@@ -51,13 +50,13 @@
               Simon Pasag
             </h1>
 
-            <p class="text-base md:text-lg text-gray-400 mt-2">
+            <p class="text-base md:text-lg text-[#A6B9A8] mt-2">
               Web Developer • UI/UX Designer
             </p>
 
-            <p class="mt-6 max-w-md md:max-w-lg text-[#F1FAEE] mx-auto md:mx-0">
-              I build responsive websites where clean design meets clean code.
-              Turning Ideas Into Interactive Web Experiences.
+            <p class="mt-6 max-w-md md:max-w-lg text-[#D7EAD9] mx-auto md:mx-0">
+              I craft responsive websites where clean design meets clean code.
+              Turning ideas into pixel-perfect Web experiences.
             </p>
 
             <div class="mt-8 flex flex-col items-center md:items-start">
@@ -75,9 +74,9 @@
                   target="_blank"
                   class="flex items-center space-x-2 group transition-all duration-300"
                 >
-                  <i class="fab fa-linkedin fa-lg text-[#F1FAEE]"></i>
+                  <i class="fab fa-linkedin fa-lg text-[#D7EAD9]"></i>
                   <span
-                    class="max-w-0 overflow-hidden whitespace-nowrap opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-300 text-sm text-[#F1FAEE]"
+                    class="max-w-0 overflow-hidden whitespace-nowrap opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-300 text-sm text-[#D7EAD9]"
                   >
                     Simon Patrick Pasag
                   </span>
@@ -88,9 +87,9 @@
                   target="_blank"
                   class="flex items-center space-x-2 group transition-all duration-300"
                 >
-                  <i class="fab fa-facebook fa-lg text-[#F1FAEE]"></i>
+                  <i class="fab fa-facebook fa-lg text-[#D7EAD9]"></i>
                   <span
-                    class="max-w-0 overflow-hidden whitespace-nowrap opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-300 text-sm text-[#F1FAEE]"
+                    class="max-w-0 overflow-hidden whitespace-nowrap opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-300 text-sm text-[#D7EAD9]"
                   >
                     Simon Ex Pression Pasag
                   </span>
@@ -101,9 +100,9 @@
                   target="_blank"
                   class="flex items-center space-x-2 group transition-all duration-300"
                 >
-                  <i class="fab fa-github fa-lg text-[#F1FAEE]"></i>
+                  <i class="fab fa-github fa-lg text-[#D7EAD9]"></i>
                   <span
-                    class="max-w-0 overflow-hidden whitespace-nowrap opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-300 text-sm text-[#F1FAEE]"
+                    class="max-w-0 overflow-hidden whitespace-nowrap opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-300 text-sm text-[#D7EAD9]"
                   >
                     SimplyMon
                   </span>
@@ -114,9 +113,9 @@
                   target="_blank"
                   class="flex items-center space-x-2 group transition-all duration-300"
                 >
-                  <i class="fab fa-discord fa-lg text-[#F1FAEE]"></i>
+                  <i class="fab fa-discord fa-lg text-[#D7EAD9]"></i>
                   <span
-                    class="max-w-0 overflow-hidden whitespace-nowrap opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-300 text-sm text-[#F1FAEE]"
+                    class="max-w-0 overflow-hidden whitespace-nowrap opacity-0 group-hover:max-w-xs group-hover:opacity-100 transition-all duration-300 text-sm text-[#D7EAD9]"
                   >
                     Discord
                   </span>
@@ -137,7 +136,7 @@
   <button
     v-show="showScrollTop"
     @click="scrollToTop"
-    class="fixed bottom-28 md:bottom-6 right-4 md:right-12 p-4 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-[#F1FAEE] shadow-xl hover:scale-110 hover:from-orange-600 hover:to-orange-700 transition transform duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2"
+    class="fixed bottom-28 md:bottom-6 right-4 md:right-12 p-4 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-[#D7EAD9] shadow-xl hover:scale-110 hover:from-orange-600 hover:to-orange-700 transition transform duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2"
     aria-label="Scroll to top"
   >
     <svg
@@ -156,7 +155,7 @@
     </svg>
   </button>
 </template>
-`
+
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import home1 from "../sections/home1.vue";

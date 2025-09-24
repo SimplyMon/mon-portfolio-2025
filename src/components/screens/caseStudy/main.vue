@@ -1,6 +1,6 @@
 <template>
   <section
-    class="bg-[#0D0D0D] text-[#F1FAEE] py-20 px-6 md:pt-48 md:pb-60 overflow-hidden"
+    class="bg-[#0D0D0D] text-[#D7EAD9] py-20 px-6 md:pt-48 md:pb-60 overflow-hidden"
   >
     <div class="max-w-5xl mx-auto text-center">
       <!-- Section Title -->
@@ -14,7 +14,7 @@
           <h2 class="text-3xl md:text-4xl font-bold">
             Case <span class="text-[#FD6F00]">Studies</span>
           </h2>
-          <p class="text-gray-400 mt-2">
+          <p class="text-[#A6B9A8] mt-2">
             In-depth looks at how I approach and deliver successful projects
           </p>
         </div>
@@ -57,7 +57,7 @@
             <router-link
               v-if="project.status === 'up'"
               :to="project.route"
-              class="bg-[#FD6F00] text-[#F1FAEE] px-6 py-2 rounded-md font-semibold hover:bg-orange-600 transition"
+              class="bg-[#FD6F00] text-[#D7EAD9] px-6 py-2 rounded-md font-semibold hover:bg-orange-600 transition"
               @click.stop
             >
               View Case Study
