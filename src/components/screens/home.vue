@@ -7,7 +7,6 @@
       class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-16"
     >
       <div class="relative flex-shrink-0 flex justify-center md:justify-start">
-        <!-- Circle Skeleton -->
         <div
           v-if="!imageLoaded"
           class="w-52 sm:w-56 md:w-80 h-72 sm:h-72 md:h-96 rounded-full bg-gray-700 animate-pulse"
