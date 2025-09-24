@@ -69,14 +69,16 @@
             <ul class="list-disc list-inside text-[#D7EAD9] space-y-2">
               <li>
                 Built IoT smart lock with real-time monitoring and remote
-                control integrated multi-factor authentication.
+                control, enabling secure multi-factor authentication
+                (fingerprint, face recognition, RFID, PIN).
               </li>
               <li>
-                Integrated multi-factor authentication (web app, fingerprint,
-                face recognition, RFID, PIN).
+                Implemented role-based access, access logs, and an alarm system,
+                reducing unauthorized entry attempts by 84% during testing.
               </li>
               <li>
-                Added role-based access, logs, and alarm for failed attempts.
+                Optimized Firebase Realtime Database queries to support 40-45
+                concurrent users without performance loss.
               </li>
             </ul>
           </div>
@@ -97,11 +99,13 @@
             </p>
             <ul class="list-disc list-inside text-[#D7EAD9] space-y-2">
               <li>
-                Launched clinic website with booking system and Google Maps
-                integration.
+                Developed clinic platform with appointment booking system,
+                digital patient records, and Google Maps integration, reducing
+                scheduling conflicts.
               </li>
               <li>
-                Developed real-time appointment management with patient records.
+                Enabled real-time appointment management, handling 10-15
+                bookings per day through digital record management
               </li>
             </ul>
           </div>
@@ -116,10 +120,17 @@
             </p>
             <ul class="list-disc list-inside text-[#D7EAD9] space-y-2">
               <li>
-                Developed self-service kiosk and POS with automated receipts.
+                Built self-service kiosk and POS system with automated receipts,
+                reducing checkout time by 95%.
               </li>
-              <li>Built admin dashboard with role-based management.</li>
-              <li>Implemented sales analytics and visualization.</li>
+              <li>
+                Integrated sales analytics and data visualization with Graph.js,
+                enabling business owners to track daily transactions.
+              </li>
+              <li>
+                Designed admin dashboard with role-based management, improving
+                oversight efficiency.
+              </li>
             </ul>
           </div>
         </div>
@@ -131,9 +142,7 @@
           WORK EXPERIENCE
         </h2>
         <div class="text-[#D7EAD9] space-y-2">
-          <p class="font-semibold">
-            Full-Stack Developer Intern: Jan 2025 – Jun 2025
-          </p>
+          <p class="font-semibold">Full-Stack Developer: Jan 2025 – Jun 2025</p>
           <ul class="list-disc list-inside space-y-2">
             <li>
               Built POS and kiosk features used daily by staff and customers.
