@@ -15,7 +15,7 @@
 
         <div class="space-y-6">
           <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl">
-            <h3 class="text-lg font-bold">Full-Stack Developer Intern</h3>
+            <h3 class="text-lg font-bold">Full-Stack Developer</h3>
             <p class="text-gray-400 text-sm mt-1">January – June 2025</p>
             <p
               class="mt-5 text-sm md:text-[16px] text-gray-300 leading-relaxed"
