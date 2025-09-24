@@ -1,6 +1,6 @@
 <template>
   <section
-    class="bg-[#0D0D0D] text-[#F1FAEE] px-4 sm:px-6 pt-28 md:pt-44 pb-20 md:pb-20"
+    class="bg-[#0D0D0D] text-[#D7EAD9] px-4 sm:px-6 pt-28 md:pt-44 pb-20 md:pb-20"
   >
     <div class="max-w-5xl mx-auto">
       <div

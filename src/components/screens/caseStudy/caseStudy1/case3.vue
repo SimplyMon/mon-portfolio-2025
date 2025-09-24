@@ -1,6 +1,6 @@
 <template>
   <section
-    class="bg-[#0D0D0D] text-[#F1FAEE] px-6 py-20 min-h-[70vh] border-t-4 border-b-4 border-[#00D8FF] flex items-center"
+    class="bg-[#0D0D0D] text-[#D7EAD9] px-6 py-20 min-h-[70vh] border-t-4 border-b-4 border-[#00D8FF] flex items-center"
   >
     <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-8 w-full">
       <div
@@ -22,7 +22,7 @@
         </div>
         <div>
           <h2 class="text-2xl font-bold mb-3">My Role and Responsibilities</h2>
-          <ul class="space-y-2 text-[#F1FAEE]">
+          <ul class="space-y-2 text-[#D7EAD9]">
             <li>• Full-Stack Developer</li>
             <li>• UI/UX Designer</li>
             <li>• Prototype</li>

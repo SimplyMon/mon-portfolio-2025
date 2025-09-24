@@ -20,7 +20,7 @@
           <h2 class="text-4xl md:text-5xl font-extrabold text-[#00D8FF]">
             The Problem
           </h2>
-          <p class="text-[#F1FAEE] text-lg leading-relaxed">
+          <p class="text-[#D7EAD9] text-lg leading-relaxed">
             Existing smart locks often fall short because they aren’t fully
             user-friendly or integrated, making them harder to manage. They
             typically lack flexible access control for different users, offer

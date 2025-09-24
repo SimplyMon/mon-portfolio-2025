@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative bg-[#0D0D0D] text-[#F1FAEE] min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden"
+    class="relative bg-[#0D0D0D] text-[#D7EAD9] min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden"
   >
     <div
       class="absolute inset-0 -z-20 bg-gradient-to-tr from-[#001F2D] via-[#002B40] to-[#001F2D]"

@@ -16,7 +16,7 @@
       <h2 class="text-3xl md:text-4xl font-extrabold mb-2">Simon Pasag</h2>
 
       <!-- Subtitle -->
-      <p class="text-gray-400 mb-6">
+      <p class="text-[#A6B9A8] mb-6">
         Web Developer | UI/UX Designer | Web Designer
       </p>
 

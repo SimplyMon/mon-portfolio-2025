@@ -17,11 +17,11 @@
         </div>
 
         <div class="md:flex-1/5">
-          <p class="text-[#F1FAEE] text-2xl leading-relaxed">User Research:</p>
+          <p class="text-[#D7EAD9] text-2xl leading-relaxed">User Research:</p>
           <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-[#00D8FF]">
             Summary
           </h2>
-          <p class="text-[#F1FAEE] text-lg leading-relaxed">
+          <p class="text-[#D7EAD9] text-lg leading-relaxed">
             I conducted an unmoderated usability study with participants who own
             or live in homes with smart security systems in the Taytay Rizal
             area. The goal was to understand their habits, preferences, and

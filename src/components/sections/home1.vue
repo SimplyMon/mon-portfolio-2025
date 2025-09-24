@@ -1,6 +1,10 @@
 <template>
-  <section class="bg-[#0D0D0D] text-[#F1FAEE] px-6 py-16">
-    <div ref="wrapperRef" class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+  <section class="bg-[#0D0D0D] text-[#D7EAD9] px-6 py-16">
+    <div
+      ref="wrapperRef"
+      class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-stretch"
+    >
+      <!-- Work Experience -->
       <div
         :class="[
           'opacity-0 translate-y-10',
@@ -8,15 +12,18 @@
         ]"
         :style="colStyle(0)"
         aria-hidden="false"
+        class="flex flex-col"
       >
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
           Work Experience
         </h2>
 
-        <div class="space-y-6">
-          <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl">
+        <div class="flex-1">
+          <div
+            class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl h-full"
+          >
             <h3 class="text-lg font-bold">Full-Stack Developer</h3>
-            <p class="text-gray-400 text-sm mt-1">January – June 2025</p>
+            <p class="text-[#A6B9A8] text-sm mt-1">January – June 2025</p>
             <p
               class="mt-5 text-sm md:text-[16px] text-gray-300 leading-relaxed"
             >
@@ -31,6 +38,7 @@
         </div>
       </div>
 
+      <!-- Education -->
       <div
         :class="[
           'opacity-0 translate-y-10',
@@ -38,33 +46,38 @@
         ]"
         :style="colStyle(150)"
         aria-hidden="false"
+        class="flex flex-col"
       >
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
           Education
         </h2>
 
-        <div class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl">
-          <h3 class="text-lg font-bold">
-            Bachelor of Science in Information Technology
-          </h3>
-          <p class="text-gray-400 text-sm mt-1">
-            Jesus Reigns Christian College
-          </p>
-          <p class="text-gray-400 text-sm">2022 – 2025</p>
-          <p class="text-gray-300 text-sm md:text-[16px] mt-2">
-            <span class="text-[#FD6F00]">GWA</span> 1.86
-          </p>
-          <p class="text-gray-300 text-sm md:text-[16px] mt-2">
-            <span class="text-[#FD6F00]">IIARL.org:</span> Presented and
-            published a Thesis paper
-          </p>
-          <p class="text-gray-300 text-sm md:text-[16px] mt-2">
-            <span class="text-[#FD6F00]">Design.Ed.ph:</span> Graphic Design
-            Foundation Bootcamp
-          </p>
-          <p class="text-gray-300 text-sm md:text-[16px] mt-2">
-            <span class="text-[#FD6F00]">UI/UX Oasis:</span> Figma Masterclass
-          </p>
+        <div class="flex-1">
+          <div
+            class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl h-full"
+          >
+            <h3 class="text-lg font-bold">
+              Bachelor of Science in Information Technology
+            </h3>
+            <p class="text-[#A6B9A8] text-sm mt-1">
+              Jesus Reigns Christian College
+            </p>
+            <p class="text-[#A6B9A8] text-sm">2022 – 2025</p>
+            <p class="text-gray-300 text-sm md:text-[16px] mt-2">
+              <span class="text-[#FD6F00]">GWA</span> 1.86
+            </p>
+            <p class="text-gray-300 text-sm md:text-[16px] mt-2">
+              <span class="text-[#FD6F00]">IIARL.org:</span> Presented and
+              published a Thesis paper
+            </p>
+            <p class="text-gray-300 text-sm md:text-[16px] mt-2">
+              <span class="text-[#FD6F00]">Design.Ed.ph:</span> Graphic Design
+              Foundation Bootcamp
+            </p>
+            <p class="text-gray-300 text-sm md:text-[16px] mt-2">
+              <span class="text-[#FD6F00]">UI/UX Oasis:</span> Figma Masterclass
+            </p>
+          </div>
         </div>
       </div>
     </div>

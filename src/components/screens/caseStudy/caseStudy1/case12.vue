@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[#0D0D0D] text-[#F1FAEE] px-6 py-20 md:py-32">
+  <section class="bg-[#0D0D0D] text-[#D7EAD9] px-6 py-20 md:py-32">
     <transition name="fade-slide">
       <div v-show="isVisible" class="max-w-5xl mx-auto space-y-16">
         <!-- Color Palette -->
@@ -30,7 +30,7 @@
                 ></div>
               </div>
               <p class="mt-3 font-medium">{{ color.name }}</p>
-              <p class="text-sm text-gray-400">{{ color.hex }}</p>
+              <p class="text-sm text-[#A6B9A8]">{{ color.hex }}</p>
             </div>
           </transition-group>
         </div>

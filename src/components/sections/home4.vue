@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[#0D0D0D] text-[#F1FAEE] py-16">
+  <section class="bg-[#0D0D0D] text-[#D7EAD9] py-16">
     <div class="max-w-5xl mx-auto text-center px-6">
       <!-- Title -->
       <h2
@@ -42,7 +42,7 @@
               <h3 class="text-xl font-semibold text-[#FD6F00]">
                 {{ t.name }}
               </h3>
-              <p class="text-gray-400 text-sm">{{ t.role }}</p>
+              <p class="text-[#A6B9A8] text-sm">{{ t.role }}</p>
             </div>
           </div>
         </div>
