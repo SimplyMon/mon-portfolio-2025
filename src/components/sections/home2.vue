@@ -120,7 +120,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
 
-// --- Tech logos imports (same as yours) ---
 import phpLogo from "@/assets/images/tech/php-plain.png";
 import cppLogo from "@/assets/images/tech/cplusplus-plain.png";
 import javaLogo from "@/assets/images/tech/java-original.png";
@@ -155,7 +154,6 @@ import sqlliteLogo from "@/assets/images/tech/sqlite-original-wordmark.png";
 import postgresqlLogo from "@/assets/images/tech/postgresql-plain-wordmark.png";
 import mongodbLogo from "@/assets/images/tech/mongodb-plain-wordmark.png";
 
-// --- Arrays ---
 const languages = ref([
   phpLogo,
   cppLogo,
