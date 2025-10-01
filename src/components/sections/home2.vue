@@ -146,7 +146,7 @@ import npmLogo from "@/assets/images/tech/npm-original-wordmark.png";
 import figmaLogo from "@/assets/images/tech/figma-original.png";
 import photoshopLogo from "@/assets/images/tech/photoshop-plain.png";
 import debianLogo from "@/assets/images/tech/debian-plain-wordmark.png";
-import linuxLogo from "@/assets/images/tech/linux-original.png";
+import wordpressLogo from "@/assets/images/tech/wordpress-plain.svg";
 
 import firebaseLogo from "@/assets/images/tech/firebase-plain.png";
 import mysqlLogo from "@/assets/images/tech/mysql-original-wordmark.png";
@@ -186,7 +186,7 @@ const tools = ref([
   figmaLogo,
   photoshopLogo,
   debianLogo,
-  linuxLogo,
+  wordpressLogo,
 ]);
 
 const databases = ref([
