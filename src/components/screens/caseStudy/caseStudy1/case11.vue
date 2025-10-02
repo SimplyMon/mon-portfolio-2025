@@ -56,7 +56,6 @@
           </div>
         </template>
 
-        <!-- for mobile no desktop -->
         <template v-else>
           <div class="flex flex-wrap justify-start gap-2 md:gap-1.5">
             <img
@@ -125,12 +124,11 @@ import mockDesktop5 from "@/assets/images/case-study/designs/hifi5.png";
 import mockDesktop6 from "@/assets/images/case-study/designs/hifi6.png";
 import mockDesktop7 from "@/assets/images/case-study/designs/hifi7.png";
 
-// Reactive state
 const currentStep = ref(0);
 
 const steps = ref([
   {
-    title: "ock App | Digital Wireframe",
+    title: "Guardian Lock App | Digital Wireframe",
     short: "Wireframe",
     images: [wire1, wire2, wire3, wire4, wire5, wire6],
   },

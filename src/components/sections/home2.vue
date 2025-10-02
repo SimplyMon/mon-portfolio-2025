@@ -1,9 +1,18 @@
 <template>
   <section
-    class="bg-[#0D0D0D] text-[#D7EAD9] px-6 pt-16 md:pt-32 flex items-center justify-center"
+    class="bg-[#0D0D0D] text-[#D7EAD9] px-6 pt-16 pb-16 md:pt-32 flex justify-center"
   >
-    <div class="max-w-5xl w-full mx-auto text-center mt-20 mb-20 lg:mt-0">
-      <div class="group text-center inline-block">
+    <div
+      ref="sectionRef"
+      :class="[
+        'max-w-xl w-full mx-auto text-center mt-16 md:mt-20 mb-16 md:mb-20 transition-all duration-1000 ease-out',
+        sectionVisible
+          ? 'opacity-100 translate-y-0'
+          : 'opacity-0 translate-y-10',
+      ]"
+    >
+      <!-- Title -->
+      <div class="group text-center inline-block mb-12">
         <h1
           ref="titleRef"
           :class="[
@@ -16,103 +25,39 @@
           Tech Stack
         </h1>
         <div
-          class="w-20 h-1 bg-[#FD6F00] rounded mb-10 lg:mb-16 mx-auto transition-all duration-500 group-hover:w-full"
+          class="w-20 h-1 bg-[#FD6F00] rounded mx-auto transition-all duration-500 group-hover:w-full"
         ></div>
       </div>
 
-      <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-12 text-center">
-        <!-- Languages -->
-        <div
-          ref="langRef"
+      <div class="flex justify-center mb-8 md:mb-10 gap-4 flex-wrap">
+        <button
+          v-for="tab in tabs"
+          :key="tab"
+          @click="activeTab = tab"
           :class="[
-            'transition-all duration-1000 ease-out',
-            isVisible.lang
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-10',
+            'px-4 py-2 rounded-md font-medium transition-colors duration-300',
+            activeTab === tab
+              ? 'bg-[#FD6F00] text-[#0D0D0D]'
+              : 'bg-[#1A1A1A] hover:bg-[#333]',
           ]"
         >
-          <h2 class="text-lg font-semibold mb-4">Languages:</h2>
-          <div
-            class="grid grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-6 justify-items-center"
-          >
-            <img
-              v-for="(lang, i) in languages"
-              :key="i"
-              :src="lang"
-              class="h-12 transition-transform duration-500 hover:scale-110"
-            />
-          </div>
-        </div>
-
-        <!-- Frameworks -->
-        <div
-          ref="fwRef"
-          :class="[
-            'transition-all duration-1000 ease-out delay-150',
-            isVisible.fw
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-10',
-          ]"
-        >
-          <h2 class="text-lg font-semibold mb-4">Frameworks:</h2>
-          <div
-            class="grid grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-6 justify-items-center"
-          >
-            <img
-              v-for="(fw, i) in frameworks"
-              :key="i"
-              :src="fw"
-              class="h-12 transition-transform duration-500 hover:scale-110"
-            />
-          </div>
-        </div>
-
-        <!-- Tools -->
-        <div
-          ref="toolsRef"
-          :class="[
-            'transition-all duration-1000 ease-out delay-300',
-            isVisible.tools
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-10',
-          ]"
-        >
-          <h2 class="text-lg font-semibold mb-4">Tools:</h2>
-          <div
-            class="grid grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-6 justify-items-center"
-          >
-            <img
-              v-for="(tool, i) in tools"
-              :key="i"
-              :src="tool"
-              class="h-12 transition-transform duration-500 hover:scale-110"
-            />
-          </div>
-        </div>
-
-        <!-- Databases -->
-        <div
-          ref="dbRef"
-          :class="[
-            'transition-all duration-1000 ease-out delay-500',
-            isVisible.db
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-10',
-          ]"
-        >
-          <h2 class="text-lg font-semibold mb-4">Databases:</h2>
-          <div
-            class="grid grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-6 justify-items-center"
-          >
-            <img
-              v-for="(db, i) in databases"
-              :key="i"
-              :src="db"
-              class="h-12 transition-transform duration-500 hover:scale-110"
-            />
-          </div>
-        </div>
+          {{ tab }}
+        </button>
       </div>
+
+      <transition name="fade" mode="out-in">
+        <div
+          :key="activeTab"
+          class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 justify-items-center"
+        >
+          <img
+            v-for="(item, i) in getActiveItems()"
+            :key="i"
+            :src="item"
+            class="h-12 transition-transform duration-500 hover:scale-110"
+          />
+        </div>
+      </transition>
     </div>
   </section>
 </template>
@@ -154,7 +99,7 @@ import sqlliteLogo from "@/assets/images/tech/sqlite-original-wordmark.png";
 import postgresqlLogo from "@/assets/images/tech/postgresql-plain-wordmark.png";
 import mongodbLogo from "@/assets/images/tech/mongodb-plain-wordmark.png";
 
-const languages = ref([
+const languages = [
   phpLogo,
   cppLogo,
   javaLogo,
@@ -163,9 +108,8 @@ const languages = ref([
   jsLogo,
   htmlLogo,
   cssLogo,
-]);
-
-const frameworks = ref([
+];
+const frameworks = [
   vueLogo,
   reactLogo,
   jqueryLogo,
@@ -174,9 +118,8 @@ const frameworks = ref([
   nodejsLogo,
   expressjsLogo,
   laravelLogo,
-]);
-
-const tools = ref([
+];
+const tools = [
   githubLogo,
   gitLogo,
   vscodeLogo,
@@ -185,49 +128,68 @@ const tools = ref([
   photoshopLogo,
   debianLogo,
   wordpressLogo,
-]);
-
-const databases = ref([
+];
+const databases = [
   firebaseLogo,
   mysqlLogo,
   sqlserverLogo,
   sqlliteLogo,
   postgresqlLogo,
   mongodbLogo,
-]);
+];
 
-const isVisible = ref({
-  title: false,
-  lang: false,
-  fw: false,
-  tools: false,
-  db: false,
-});
+const tabs = ["Languages", "Frameworks", "Tools", "Databases"];
+const activeTab = ref("Languages");
 
+const isVisible = ref({ title: false });
 const titleRef = ref(null);
-const langRef = ref(null);
-const fwRef = ref(null);
-const toolsRef = ref(null);
-const dbRef = ref(null);
+
+const sectionVisible = ref(false);
+const sectionRef = ref(null);
 
 onMounted(() => {
-  const observer = new IntersectionObserver(
+  const titleObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (entry.target === titleRef.value) isVisible.value.title = true;
-          if (entry.target === langRef.value) isVisible.value.lang = true;
-          if (entry.target === fwRef.value) isVisible.value.fw = true;
-          if (entry.target === toolsRef.value) isVisible.value.tools = true;
-          if (entry.target === dbRef.value) isVisible.value.db = true;
-        }
+        if (entry.isIntersecting) isVisible.value.title = true;
       });
     },
     { threshold: 0.2 }
   );
+  if (titleRef.value) titleObserver.observe(titleRef.value);
 
-  [titleRef, langRef, fwRef, toolsRef, dbRef].forEach((refEl) => {
-    if (refEl.value) observer.observe(refEl.value);
-  });
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) sectionVisible.value = true;
+      });
+    },
+    { threshold: 0.2 }
+  );
+  if (sectionRef.value) sectionObserver.observe(sectionRef.value);
 });
+
+function getActiveItems() {
+  switch (activeTab.value) {
+    case "Languages":
+      return languages;
+    case "Frameworks":
+      return frameworks;
+    case "Tools":
+      return tools;
+    case "Databases":
+      return databases;
+  }
+}
 </script>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

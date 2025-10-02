@@ -55,8 +55,9 @@
             </p>
 
             <p class="mt-6 max-w-md md:max-w-lg text-[#D7EAD9] mx-auto md:mx-0">
-              I craft responsive websites where clean design meets clean code.
-              Turning ideas into pixel-perfect Web experiences.
+              Your website should help, not frustrate. Your ideas deserve a site
+              that works simple, clean, and easy to use. Designed for visitors
+              who actually enjoy it.
             </p>
 
             <div class="mt-8 flex flex-col items-center md:items-start">
