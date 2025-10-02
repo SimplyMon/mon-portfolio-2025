@@ -89,7 +89,7 @@ import vscodeLogo from "@/assets/images/tech/vscode-original.png";
 import npmLogo from "@/assets/images/tech/npm-original-wordmark.png";
 import figmaLogo from "@/assets/images/tech/figma-original.png";
 import photoshopLogo from "@/assets/images/tech/photoshop-plain.png";
-import debianLogo from "@/assets/images/tech/debian-plain-wordmark.png";
+import dockerLogo from "@/assets/images/tech/docker-plain-wordmark.svg";
 import wordpressLogo from "@/assets/images/tech/wordpress-plain.svg";
 
 import firebaseLogo from "@/assets/images/tech/firebase-plain.png";
@@ -120,14 +120,14 @@ const frameworks = [
   laravelLogo,
 ];
 const tools = [
+  vscodeLogo,
   githubLogo,
   gitLogo,
-  vscodeLogo,
   npmLogo,
   figmaLogo,
   photoshopLogo,
-  debianLogo,
   wordpressLogo,
+  dockerLogo,
 ];
 const databases = [
   firebaseLogo,
