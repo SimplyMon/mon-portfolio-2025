@@ -4,10 +4,10 @@
   >
     <div class="max-w-5xl w-full mx-auto grid md:grid-cols-2 gap-12">
       <div class="flex flex-col justify-center space-y-6">
-        <h2 class="text-4xl font-bold text-[#D7EAD9]">Get in Touch</h2>
+        <h2 class="text-4xl font-bold text-[#D7EAD9]">Let’s Connect!</h2>
         <p class="text-gray-300">
-          I'm open to questions, collaborations, or job opportunities. Reach out
-          and let's create something great together.
+          Got an idea? Let’s turn it into a website that’s simple, clean, and a
+          joy to use. Reach out and let’s start creating together.
         </p>
 
         <div class="space-y-4">
