@@ -138,7 +138,7 @@ const databases = [
   mongodbLogo,
 ];
 
-const tabs = ["Languages", "Frameworks", "Tools", "Databases"];
+const tabs = ["Languages", "Frameworks", "Databases", "Tools"];
 const activeTab = ref("Languages");
 
 const isVisible = ref({ title: false });
