@@ -55,9 +55,10 @@
             </p>
 
             <p class="mt-6 max-w-md md:max-w-lg text-[#D7EAD9] mx-auto md:mx-0">
-              Your website should help, not frustrate. Your ideas deserve a site
-              that works simple, clean, and easy to use. Designed for visitors
-              who actually enjoy it.
+              Your website should help, not frustrate. Your ideas deserve more
+              than a website they deserve an experience. I build clean, simple,
+              high-performing sites, designed for visitors who actually enjoy
+              them.
             </p>
 
             <div class="mt-8 flex flex-col items-center md:items-start">
