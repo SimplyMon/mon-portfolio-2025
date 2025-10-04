@@ -13,17 +13,17 @@
     >
       <!-- Title -->
       <div class="group text-center inline-block mb-12">
-        <h1
+        <h2
           ref="titleRef"
           :class="[
-            'text-4xl font-bold mb-2 cursor-pointer transition-all duration-1000 ease-out',
+            'text-3xl md:text-4xl font-bold mb-2 cursor-pointer transition-all duration-1000 ease-out',
             isVisible.title
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-10',
           ]"
         >
           Tech Stack
-        </h1>
+        </h2>
         <div
           class="w-20 h-1 bg-[#FD6F00] rounded mx-auto transition-all duration-500 group-hover:w-full"
         ></div>

@@ -23,17 +23,23 @@
             class="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl h-full"
           >
             <h3 class="text-lg font-bold">Full-Stack Developer</h3>
-            <p class="text-[#A6B9A8] text-sm mt-1">January – June 2025</p>
-            <p
-              class="mt-5 text-sm md:text-[16px] text-gray-300 leading-relaxed"
+            <p class="text-[#A6B9A8] text-sm mt-1 mb-3">January – June 2025</p>
+            <ul
+              class="mt-2 text-sm md:text-[16px] text-gray-300 list-disc list-inside marker:text-[#FD6F00]"
             >
-              Developed
-              <span class="text-[#FD6F00]">POS and kiosk features</span>
-              used daily by staff and customers. Improved stability by debugging
-              and optimizing the codebase. Designed intuitive web UIs that
-              reduced booking time and transaction errors. Gaining experience in
-              server side Development
-            </p>
+              <li class="my-2">
+                Built POS and kiosk features for customer-facing and staff
+                applications, ensuring seamless user experiences.
+              </li>
+              <li class="mb-2">
+                Designed and developed intuitive web UIs using modern
+                frameworks, reducing booking complexity and errors.
+              </li>
+              <li>
+                Gained practical experience in server-side development, focusing
+                on scalability and performance.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -62,7 +68,7 @@
             <p class="text-[#A6B9A8] text-sm mt-1">
               Jesus Reigns Christian College
             </p>
-            <p class="text-[#A6B9A8] text-sm">2022 – 2025</p>
+            <p class="text-[#A6B9A8] text-sm mb-3">2022 – 2025</p>
             <p class="text-gray-300 text-sm md:text-[16px] mt-2">
               <span class="text-[#FD6F00]">GWA</span> 1.86
             </p>
@@ -76,6 +82,11 @@
             </p>
             <p class="text-gray-300 text-sm md:text-[16px] mt-2">
               <span class="text-[#FD6F00]">UI/UX Oasis:</span> Figma Masterclass
+            </p>
+            <p class="text-gray-300 text-sm md:text-[16px] mt-2">
+              <span class="text-[#FD6F00]">Relevant Coursework:</span> Web
+              Development, Database Management, Network, Software Engineering,
+              Cybersecurity
             </p>
           </div>
         </div>
