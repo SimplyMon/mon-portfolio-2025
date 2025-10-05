@@ -1,6 +1,6 @@
 <template>
   <section
-    class="bg-[#0D0D0D] text-[#D7EAD9] py-20 px-6 md:pt-48 md:pb-60 overflow-hidden"
+    class="bg-[#0D0D0D] text-[#D7EAD9] py-20 px-6 pt-24 md:pt-48 md:pb-60 overflow-hidden"
   >
     <div class="max-w-5xl mx-auto text-center">
       <!-- Section Title -->

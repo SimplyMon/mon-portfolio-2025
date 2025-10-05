@@ -1,7 +1,7 @@
 <!-- this is version2 -->
 <template>
   <section
-    class="bg-[#0D0D0D] text-[#D7EAD9] px-6 min-h-screen flex items-center justify-center"
+    class="bg-[#0D0D0D] text-[#D7EAD9] px-6 py-24 md:py-0 min-h-screen flex items-center justify-center"
   >
     <div
       class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-16"
@@ -55,9 +55,9 @@
             </p>
 
             <p class="mt-6 max-w-md md:max-w-lg text-[#D7EAD9] mx-auto md:mx-0">
-              Your website should help, not frustrate. Your ideas deserve more
-              than a website they deserve an experience. I build clean, simple,
-              high-performing sites, designed for visitors who actually enjoy
+              Your website should help, not frustrate. I build clean, simple,
+              high-performing sites, Your ideas deserve more than a website they
+              deserve an experience. Designed for visitors who actually enjoy
               them.
             </p>
 

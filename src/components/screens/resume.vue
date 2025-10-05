@@ -1,6 +1,6 @@
 <template>
   <section
-    class="bg-[#0D0D0D] text-[#D7EAD9] min-h-screen px-6 py-12 md:pt-36 md:pb-40"
+    class="bg-[#0D0D0D] text-[#D7EAD9] min-h-screen px-6 py-12 pt-24 md:pt-36 md:pb-40"
   >
     <div class="max-w-5xl mx-auto space-y-8 opacity-0 animate-fade-in-up">
       <header class="text-center space-y-2">
