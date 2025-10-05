@@ -55,9 +55,9 @@
             </p>
 
             <p class="mt-6 max-w-md md:max-w-lg text-[#D7EAD9] mx-auto md:mx-0">
-              Your website should help, not frustrate. Your ideas deserve more
-              than a website they deserve an experience. I build clean, simple,
-              high-performing sites, designed for visitors who actually enjoy
+              Your website should help, not frustrate. I build clean, simple,
+              high-performing sites, Your ideas deserve more than a website they
+              deserve an experience. Designed for visitors who actually enjoy
               them.
             </p>
 
