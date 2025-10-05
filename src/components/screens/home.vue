@@ -1,7 +1,7 @@
 <!-- this is version2 -->
 <template>
   <section
-    class="bg-[#0D0D0D] text-[#D7EAD9] px-6 min-h-screen flex items-center justify-center"
+    class="bg-[#0D0D0D] text-[#D7EAD9] px-6 py-24 md:py-0 min-h-screen flex items-center justify-center"
   >
     <div
       class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-16"

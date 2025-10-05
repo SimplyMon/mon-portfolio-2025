@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed w-full z-50 bottom-8 md:bottom-auto md:top-0 transition-all duration-300"
+    class="fixed w-full z-50 md:bottom-auto md:top-0 transition-all duration-300"
     :class="{
       'py-1 md:py-1.5': isShrunk,
       'py-5 md:py-5': !isShrunk,
@@ -51,7 +51,7 @@
           class="flex items-center flex-shrink-0 transition-all duration-300"
         >
           <img
-            src="../../assets/images/logo2.png"
+            src="../../assets/images/logo3.png"
             alt="Logo"
             class="object-contain transition-all duration-300 mx-4"
             :class="{
