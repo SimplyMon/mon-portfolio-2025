@@ -7,15 +7,14 @@
     }"
   >
     <div class="max-w-5xl mx-auto flex justify-center px-2 sm:px-4">
+      <!-- Container for navbar items -->
       <div
         class="flex flex-nowrap items-center justify-center gap-1.5 sm:gap-3.5 px-1 sm:px-3.5 py-1.5 border-3 border-white/20 rounded-full backdrop-blur-lg shadow-lg whitespace-nowrap transition-all duration-700 ease-in-out overflow-hidden"
-        :class="[
-          isShrunk ? 'gap-1 sm:gap-2' : 'gap-1.5 sm:gap-3.5',
-          showLinks ? 'w-[90%] sm:w-auto px-4' : 'w-16 sm:w-20 px-2',
-        ]"
+        :class="[isShrunk ? 'gap-1 sm:gap-2' : 'gap-1.5 sm:gap-3.5']"
       >
+        <!-- Links on mobile will wrap -->
         <div
-          class="flex items-center gap-1.5 sm:gap-3.5 transition-all duration-300"
+          class="flex flex-wrap justify-center items-center gap-1.5 sm:gap-3.5 transition-all duration-300"
           :class="{
             'opacity-0 translate-x-5': !showLinks,
             'animate-slideOutLeft': showLinks,
@@ -52,9 +51,10 @@
           </router-link>
         </div>
 
+        <!-- Logo -->
         <router-link
           to="/"
-          class="flex items-center flex-shrink-0 transition-all duration-300"
+          class="flex items-center flex-shrink-0 transition-all duration-300 mx-2"
           :class="{
             'opacity-0 translate-y-10': !showLogo,
             'animate-popUpLogo': showLogo,
@@ -63,7 +63,7 @@
           <img
             src="../../assets/images/logo3.png"
             alt="Logo"
-            class="object-contain transition-all duration-300 mx-4"
+            class="object-contain transition-all duration-300"
             :class="{
               'w-5 sm:w-7': isShrunk,
               'w-6 sm:w-10': !isShrunk,
@@ -71,8 +71,9 @@
           />
         </router-link>
 
+        <!-- Right Links -->
         <div
-          class="flex items-center gap-1.5 sm:gap-3.5 transition-all duration-300"
+          class="flex flex-wrap justify-center items-center gap-1.5 sm:gap-3.5 transition-all duration-300"
           :class="{
             'opacity-0 -translate-x-5': !showLinks,
             'animate-slideOutRight': showLinks,
