@@ -11,15 +11,15 @@
         class="flex flex-nowrap items-center justify-center gap-1.5 sm:gap-3.5 px-1 sm:px-3.5 py-1.5 border-3 border-white/20 rounded-full backdrop-blur-lg shadow-lg whitespace-nowrap transition-all duration-700 ease-in-out overflow-hidden"
         :class="[
           isShrunk ? 'gap-1 sm:gap-2' : 'gap-1.5 sm:gap-3.5',
-          showLinks ? 'w-[90%] sm:w-auto px-4' : 'w-16 sm:w-20 px-2', // 👈 width expands when links appear
+          showLinks ? 'w-[90%] sm:w-auto px-4' : 'w-16 sm:w-20 px-2',
         ]"
       >
         <!-- Left Links -->
         <div
           class="flex items-center gap-1.5 sm:gap-3.5 transition-all duration-300"
           :class="{
-            'opacity-0 translate-y-2': !showLinks,
-            'animate-fadeInLinks': showLinks,
+            'opacity-0 translate-x-5': !showLinks, // start closer to logo, slide outward left
+            'animate-slideOutLeft': showLinks,
           }"
         >
           <router-link
@@ -57,7 +57,10 @@
         <router-link
           to="/"
           class="flex items-center flex-shrink-0 transition-all duration-300"
-          :class="{ 'opacity-0 scale-0': !showLogo, 'animate-popIn': showLogo }"
+          :class="{
+            'opacity-0 translate-y-10': !showLogo,
+            'animate-popUpLogo': showLogo,
+          }"
         >
           <img
             src="../../assets/images/logo3.png"
@@ -74,8 +77,8 @@
         <div
           class="flex items-center gap-1.5 sm:gap-3.5 transition-all duration-300"
           :class="{
-            'opacity-0 translate-y-2': !showLinks,
-            'animate-fadeInLinks': showLinks,
+            'opacity-0 -translate-x-5': !showLinks, // start closer to logo, slide outward right
+            'animate-slideOutRight': showLinks,
           }"
         >
           <router-link
@@ -131,7 +134,6 @@ const handleScroll = () => {
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
 
-  // Animate logo first, then links
   setTimeout(() => (showLogo.value = true), 300);
   setTimeout(() => (showLinks.value = true), 1100);
 });
@@ -142,36 +144,51 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-@keyframes popIn {
+@keyframes popUpLogo {
   0% {
     opacity: 0;
-    transform: scale(0.4);
+    transform: translateY(40px) scale(0.8);
   }
   80% {
-    transform: scale(1.1);
+    transform: translateY(-5px) scale(1.05);
     opacity: 1;
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0) scale(1);
   }
 }
 
-@keyframes fadeInLinks {
+@keyframes slideOutLeft {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateX(10px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
-.animate-popIn {
-  animation: popIn 0.6s ease forwards;
+@keyframes slideOutRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.animate-fadeInLinks {
-  animation: fadeInLinks 0.7s ease forwards;
+.animate-popUpLogo {
+  animation: popUpLogo 0.8s ease forwards;
+}
+
+.animate-slideOutLeft {
+  animation: slideOutLeft 0.8s ease forwards;
+}
+
+.animate-slideOutRight {
+  animation: slideOutRight 0.8s ease forwards;
 }
 </style>
