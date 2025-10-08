@@ -14,11 +14,10 @@
           showLinks ? 'w-[90%] sm:w-auto px-4' : 'w-16 sm:w-20 px-2',
         ]"
       >
-        <!-- Left Links -->
         <div
           class="flex items-center gap-1.5 sm:gap-3.5 transition-all duration-300"
           :class="{
-            'opacity-0 translate-x-5': !showLinks, // start closer to logo, slide outward left
+            'opacity-0 translate-x-5': !showLinks,
             'animate-slideOutLeft': showLinks,
           }"
         >
@@ -53,7 +52,6 @@
           </router-link>
         </div>
 
-        <!-- Center Logo -->
         <router-link
           to="/"
           class="flex items-center flex-shrink-0 transition-all duration-300"
@@ -73,11 +71,10 @@
           />
         </router-link>
 
-        <!-- Right Links -->
         <div
           class="flex items-center gap-1.5 sm:gap-3.5 transition-all duration-300"
           :class="{
-            'opacity-0 -translate-x-5': !showLinks, // start closer to logo, slide outward right
+            'opacity-0 -translate-x-5': !showLinks,
             'animate-slideOutRight': showLinks,
           }"
         >
@@ -134,8 +131,8 @@ const handleScroll = () => {
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
 
-  setTimeout(() => (showLogo.value = true), 300);
-  setTimeout(() => (showLinks.value = true), 1100);
+  setTimeout(() => (showLogo.value = true), 8200);
+  setTimeout(() => (showLinks.value = true), 8400);
 });
 
 onUnmounted(() => {
