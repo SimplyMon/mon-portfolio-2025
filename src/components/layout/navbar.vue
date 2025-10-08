@@ -131,8 +131,8 @@ const handleScroll = () => {
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
 
-  setTimeout(() => (showLogo.value = true), 8200);
-  setTimeout(() => (showLinks.value = true), 8400);
+  setTimeout(() => (showLogo.value = true), 8300);
+  setTimeout(() => (showLinks.value = true), 8500);
 });
 
 onUnmounted(() => {
