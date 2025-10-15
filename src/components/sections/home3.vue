@@ -100,6 +100,7 @@ import lamesaPos from "@/assets/images/projects/lamesaPos.png";
 import lamesaWeb from "@/assets/images/projects/lamesaWeb.png";
 import bozriahPos from "@/assets/images/projects/bozriahPos.png";
 import bozriahKiosk from "@/assets/images/projects/bozriahKiosk.png";
+import ascendCare from "@/assets/images/projects/ascendcare.png";
 
 const activeProject = ref(null);
 const toggleOverlay = (index) => {
@@ -122,15 +123,22 @@ const projects = [
     livePreview: "https://diverseoralcore.vercel.app/",
   },
   {
-    title: "Lamesa Inasal POS System",
-    category: "Web based Point Of Sale System",
-    image: lamesaPos,
-    caseStudy: "/case-study/lamesa-inasal",
+    title: "Ascend Care",
+    category: "Web based Home Care Service Application",
+    image: ascendCare,
+    livePreview: "https://ascendcare.vercel.app/",
   },
   {
     title: "Lamesa Inasal Website",
     category: "Lamesa Website",
     image: lamesaWeb,
+    caseStudy: "/case-study/lamesa-inasal",
+    livePreview: "https://lamesa.infinityfreeapp.com/WEB/index.php",
+  },
+  {
+    title: "Lamesa Inasal POS System",
+    category: "Web based Point Of Sale System",
+    image: lamesaPos,
     caseStudy: "/case-study/lamesa-inasal",
   },
   {
