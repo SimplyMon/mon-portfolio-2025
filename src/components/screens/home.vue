@@ -208,7 +208,8 @@ const showScrollTop = ref(false);
 const showContent = ref(false);
 const videoEnded = ref(false);
 
-const heroImage = new URL("../../assets/images/hero.png", import.meta.url).href;
+const heroImage = new URL("../../assets/images/hero2.png", import.meta.url)
+  .href;
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
