@@ -172,7 +172,7 @@
       <button
         v-show="showScrollTop"
         @click="scrollToTop"
-        class="fixed bottom-28 md:bottom-6 right-4 md:right-12 p-4 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-[#D7EAD9] shadow-xl hover:scale-110 hover:from-orange-600 hover:to-orange-700 transition transform duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2"
+        class="fixed z-50 bottom-6 right-6 p-4 rounded-full bg-gradient-to-br from-orange-500 to-orange-600 text-[#D7EAD9] shadow-xl hover:scale-110 hover:from-orange-600 hover:to-orange-700 transition transform duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2"
         aria-label="Scroll to top"
       >
         <svg
