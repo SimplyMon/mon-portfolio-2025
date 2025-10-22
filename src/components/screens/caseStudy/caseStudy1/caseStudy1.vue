@@ -74,7 +74,7 @@
     <button
       v-show="showScrollTop"
       @click="scrollToTop"
-      class="fixed bottom-28 md:bottom-6 right-4 md:right-12 p-4 rounded-full bg-[#00D8FF] text-black shadow-lg hover:bg-[#00c9e6] transition z-50"
+      class="fixed bottom-6 right-4 p-4 rounded-full bg-[#00D8FF] text-black shadow-lg hover:bg-[#00c9e6] transition z-50"
       aria-label="Scroll to top"
     >
       <svg
