@@ -7,12 +7,10 @@
     }"
   >
     <div class="max-w-5xl mx-auto flex justify-center px-2 sm:px-4">
-      <!-- Container for navbar items -->
       <div
         class="flex flex-nowrap items-center justify-center gap-1.5 sm:gap-3.5 px-1 sm:px-3.5 py-1.5 border-3 border-white/20 rounded-full backdrop-blur-lg shadow-lg whitespace-nowrap transition-all duration-700 ease-in-out overflow-hidden"
         :class="[isShrunk ? 'gap-1 sm:gap-2' : 'gap-1.5 sm:gap-3.5']"
       >
-        <!-- Links on mobile will wrap -->
         <div
           class="flex flex-wrap justify-center items-center gap-1.5 sm:gap-3.5 transition-all duration-300"
           :class="{
@@ -71,7 +69,6 @@
           />
         </router-link>
 
-        <!-- Right Links -->
         <div
           class="flex flex-wrap justify-center items-center gap-1.5 sm:gap-3.5 transition-all duration-300"
           :class="{
@@ -115,12 +112,16 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, watch } from "vue";
+import { useRoute } from "vue-router";
 
 const isShrunk = ref(false);
 const showLogo = ref(false);
 const showLinks = ref(false);
 let lastScroll = 0;
+
+const route = useRoute();
+let animationPlayed = false;
 
 const handleScroll = () => {
   const currentScroll = window.scrollY;
@@ -132,9 +133,26 @@ const handleScroll = () => {
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
 
-  setTimeout(() => (showLogo.value = true), 8300);
-  setTimeout(() => (showLinks.value = true), 8500);
+  if (route.path !== "/") {
+    showLogo.value = true;
+    showLinks.value = true;
+  }
 });
+
+watch(
+  () => route.path,
+  (newPath) => {
+    if (newPath === "/" && !animationPlayed) {
+      setTimeout(() => (showLogo.value = true), 8300);
+      setTimeout(() => (showLinks.value = true), 8500);
+      animationPlayed = true;
+    } else if (newPath !== "/") {
+      showLogo.value = true;
+      showLinks.value = true;
+    }
+  },
+  { immediate: true }
+);
 
 onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll);
