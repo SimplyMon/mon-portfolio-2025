@@ -74,19 +74,19 @@ const testimonials = [
   {
     feedback:
       "Working with Simon was smooth and professional. He built our project fast and exceeded expectations.",
-    name: "Kamal Hussain",
+    name: "Kamal, Hussain",
     role: "Owner, Lamesa Inasal Restaurant",
   },
   {
     feedback:
       "Simon’s attention to detail and clean design made our product stand out. Highly recommend him.",
-    name: "Jaman, Aswad",
+    name: "Santos, Jonathan",
     role: "Information Tech, Student",
   },
   {
     feedback:
       "A reliable developer who communicates well and delivers on time. Our website runs flawlessly.",
-    name: "Pagapuro, Jane",
+    name: "Pagaturo, Johan",
     role: "QA Engineer",
   },
 ];
