@@ -86,7 +86,7 @@ const testimonials = [
   {
     feedback:
       "A reliable developer who communicates well and delivers on time. Our website runs flawlessly.",
-    name: "Pagaturo, Johan",
+    name: "Pagaturo, Cath",
     role: "QA Engineer",
   },
 ];
