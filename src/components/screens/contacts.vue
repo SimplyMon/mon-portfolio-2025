@@ -143,10 +143,12 @@
         </div>
 
         <div class="flex justify-center mt-4">
-          <div
-            class="g-recaptcha"
-            data-sitekey="6LcyAfwrAAAAAIW3a80PzlRFDWoBWrNk-ODh44sJ"
-          ></div>
+          <div class="captcha-wrapper">
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LcyAfwrAAAAAIW3a80PzlRFDWoBWrNk-ODh44sJ"
+            ></div>
+          </div>
         </div>
 
         <button
@@ -259,5 +261,16 @@ function displayError(message) {
 input:focus,
 textarea:focus {
   transition: all 0.2s ease-in-out;
+}
+
+.captcha-wrapper {
+  display: inline-block;
+}
+
+@media (max-width: 640px) {
+  .captcha-wrapper .g-recaptcha {
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
 }
 </style>
