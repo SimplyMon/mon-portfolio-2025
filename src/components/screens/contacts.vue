@@ -1,6 +1,6 @@
 <template>
   <section
-    class="bg-[#0D0D0D] min-h-screen flex items-center justify-center py-20 px-6 pt-24 md:pt-40 md:pb-60"
+    class="bg-[#0D0D0D] min-h-screen flex items-center justify-center py-20 px-6 pt-24 md:pt-28 md:pb-60"
   >
     <div class="max-w-5xl w-full mx-auto grid md:grid-cols-2 gap-12">
       <div class="flex flex-col justify-center space-y-6">
@@ -135,6 +135,12 @@
             required
           ></textarea>
         </div>
+
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LcyAfwrAAAAAIW3a80PzlRFDWoBWrNk-ODh44sJ"
+        ></div>
+
         <button
           type="submit"
           class="w-full bg-[#FD6F00] text-[#D7EAD9] font-semibold py-3 rounded-lg hover:bg-[#e65a00] transition flex items-center justify-center"
@@ -170,43 +176,76 @@
         </p>
       </form>
     </div>
+
+    <contactModal
+      v-model:show="showError"
+      title="Oops!"
+      :message="errorMessage"
+    />
   </section>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { push, ref as dbRef } from "firebase/database";
 import { database } from "../../firebase/firebase";
+import contactModal from "../modals/contactModal.vue";
 
 const form = ref({ name: "", email: "", message: "" });
 const loading = ref(false);
 const success = ref(false);
+const showError = ref(false);
+const errorMessage = ref("");
+let recaptchaWidgetId = null;
+
+onMounted(() => {
+  recaptchaWidgetId = grecaptcha.render(
+    document.querySelector(".g-recaptcha"),
+    {
+      sitekey: "6LcyAfwrAAAAAIW3a80PzlRFDWoBWrNk-ODh44sJ",
+    }
+  );
+});
 
 async function submitForm() {
   loading.value = true;
   success.value = false;
+
+  const token = grecaptcha.getResponse(recaptchaWidgetId);
+  if (!token) {
+    displayError("Please verify that you are not a robot.");
+    loading.value = false;
+    return;
+  }
 
   try {
     await push(dbRef(database, "contacts"), {
       name: form.value.name,
       email: form.value.email,
       message: form.value.message,
+      recaptchaToken: token,
       timestamp: new Date().toISOString(),
     });
 
     success.value = true;
-    form.value.name = "";
-    form.value.email = "";
-    form.value.message = "";
-  } catch (error) {
-    console.error("Error sending message:", error);
-    alert("Oops! Something went wrong. Please try again.");
+    form.value = { name: "", email: "", message: "" };
+  } catch (err) {
+    console.error(err);
+    displayError("Oops! Something went wrong. Please try again.");
   } finally {
     loading.value = false;
+    grecaptcha.reset(recaptchaWidgetId);
   }
 }
-</script>
 
+function displayError(message) {
+  errorMessage.value = message;
+  showError.value = true;
+  setTimeout(() => {
+    showError.value = false;
+  }, 3000);
+}
+</script>
 <style>
 input:focus,
 textarea:focus {
