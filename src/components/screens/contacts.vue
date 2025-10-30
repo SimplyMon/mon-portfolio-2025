@@ -1,17 +1,19 @@
 <template>
-  <section
-    class="bg-[#0D0D0D] min-h-screen flex items-center justify-center py-20 px-6 pt-24 md:pt-28 md:pb-60"
-  >
-    <div class="max-w-5xl w-full mx-auto grid md:grid-cols-2 gap-12">
+  <section class="bg-[#0D0D0D] min-h-screen py-12 px-6 md:py-28 md:px-6">
+    <div
+      class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
+    >
       <div class="flex flex-col justify-center space-y-6">
-        <h2 class="text-4xl font-bold text-[#D7EAD9]">Let’s Connect!</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-[#D7EAD9]">
+          Let’s Connect!
+        </h2>
         <p class="text-gray-300">
           Got an idea? Let’s turn it into a website that’s simple, clean, and a
           joy to use. Reach out and let’s start creating together.
         </p>
 
         <div class="space-y-4">
-          <div class="flex items-center space-x-4">
+          <div class="flex flex-wrap items-center gap-2 md:gap-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6 text-[#FD6F00]"
@@ -33,7 +35,7 @@
             >
           </div>
 
-          <div class="flex items-center space-x-4">
+          <div class="flex flex-wrap items-center gap-2 md:gap-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6 text-[#FD6F00]"
@@ -55,7 +57,7 @@
             >
           </div>
 
-          <div class="flex items-center space-x-4">
+          <div class="flex flex-wrap items-center gap-2 md:gap-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6 text-[#FD6F00]"
@@ -74,7 +76,7 @@
             >
           </div>
 
-          <div class="flex items-center space-x-4">
+          <div class="flex flex-wrap items-center gap-2 md:gap-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6 text-[#FD6F00]"
@@ -96,7 +98,7 @@
       </div>
 
       <form
-        class="bg-gray-900 shadow-lg rounded-lg p-8 space-y-6"
+        class="bg-gray-900 shadow-lg rounded-lg p-6 md:p-8 space-y-6 w-full"
         @submit.prevent="submitForm"
       >
         <div>
@@ -111,6 +113,7 @@
             required
           />
         </div>
+
         <div>
           <label class="block text-gray-200 font-medium mb-2" for="email"
             >Email</label
@@ -123,6 +126,7 @@
             required
           />
         </div>
+
         <div>
           <label class="block text-gray-200 font-medium mb-2" for="message"
             >Message</label
@@ -171,6 +175,7 @@
             </svg>
           </span>
         </button>
+
         <p v-if="success" class="text-green-400 font-medium mt-2">
           Message sent successfully!
         </p>
