@@ -1,6 +1,6 @@
 <template>
   <section
-    class="bg-[#0D0D0D] min-h-screen flex items-center justify-center py-12 px-6 md:py-28 md:px-6"
+    class="bg-[#0D0D0D] min-h-screen flex items-center justify-center py-12 px-6 md:py-28 md:px-6 pt-24"
   >
     <div
       class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
@@ -142,6 +142,7 @@
           ></textarea>
         </div>
 
+        <!-- Fixed reCAPTCHA with proper centering on mobile -->
         <div class="flex justify-center mt-4">
           <div class="captcha-wrapper">
             <div
@@ -258,19 +259,17 @@ function displayError(message) {
 }
 </script>
 <style>
-input:focus,
-textarea:focus {
-  transition: all 0.2s ease-in-out;
-}
-
 .captcha-wrapper {
+  /* Allow the scaled captcha to be properly centered */
   display: inline-block;
 }
 
+/* Shrink captcha on small screens and center */
 @media (max-width: 640px) {
+  /* Tailwind 'sm' breakpoint */
   .captcha-wrapper .g-recaptcha {
-    transform: scale(0.9);
-    transform-origin: top center;
+    transform: scale(0.87); /* Shrink */
+    transform-origin: top center; /* Keep it centered */
   }
 }
 </style>
