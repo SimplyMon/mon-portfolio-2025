@@ -142,7 +142,6 @@
           ></textarea>
         </div>
 
-        <!-- Fixed reCAPTCHA with proper centering on mobile -->
         <div class="flex justify-center mt-4">
           <div class="captcha-wrapper">
             <div
@@ -154,7 +153,7 @@
 
         <button
           type="submit"
-          class="w-full bg-[#FD6F00] text-[#0D0D0D] font-semibold py-3 rounded-lg hover:bg-[#e65a00] transition flex items-center justify-center"
+          class="w-full bg-[#FD6F00] text-[#D7EAD9] font-semibold py-3 rounded-lg hover:bg-[#e65a00] transition flex items-center justify-center"
           :disabled="loading"
         >
           <span v-if="!loading">Send Message</span>
@@ -259,17 +258,19 @@ function displayError(message) {
 }
 </script>
 <style>
+input:focus,
+textarea:focus {
+  transition: all 0.2s ease-in-out;
+}
+
 .captcha-wrapper {
-  /* Allow the scaled captcha to be properly centered */
   display: inline-block;
 }
 
-/* Shrink captcha on small screens and center */
 @media (max-width: 640px) {
-  /* Tailwind 'sm' breakpoint */
   .captcha-wrapper .g-recaptcha {
-    transform: scale(0.87); /* Shrink */
-    transform-origin: top center; /* Keep it centered */
+    transform: scale(0.87);
+    transform-origin: top center;
   }
 }
 </style>
