@@ -1,5 +1,7 @@
 <template>
-  <section class="bg-[#0D0D0D] min-h-screen py-12 px-6 md:py-28 md:px-6">
+  <section
+    class="bg-[#0D0D0D] min-h-screen flex items-center justify-center py-12 px-6 md:py-28 md:px-6"
+  >
     <div
       class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
     >
@@ -140,14 +142,16 @@
           ></textarea>
         </div>
 
-        <div
-          class="g-recaptcha"
-          data-sitekey="6LcyAfwrAAAAAIW3a80PzlRFDWoBWrNk-ODh44sJ"
-        ></div>
+        <div class="flex justify-center mt-4">
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LcyAfwrAAAAAIW3a80PzlRFDWoBWrNk-ODh44sJ"
+          ></div>
+        </div>
 
         <button
           type="submit"
-          class="w-full bg-[#FD6F00] text-[#D7EAD9] font-semibold py-3 rounded-lg hover:bg-[#e65a00] transition flex items-center justify-center"
+          class="w-full bg-[#FD6F00] text-[#0D0D0D] font-semibold py-3 rounded-lg hover:bg-[#e65a00] transition flex items-center justify-center"
           :disabled="loading"
         >
           <span v-if="!loading">Send Message</span>
