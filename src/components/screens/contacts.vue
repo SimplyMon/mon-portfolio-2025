@@ -210,17 +210,20 @@ const errorMessage = ref("");
 let recaptchaWidgetId = null;
 
 onMounted(() => {
-  const loadRecaptcha = () => {
-    if (window.grecaptcha) {
+  const waitForRecaptcha = () => {
+    if (window.grecaptcha && typeof window.grecaptcha.render === "function") {
       recaptchaWidgetId = grecaptcha.render(
         document.querySelector(".g-recaptcha"),
-        { sitekey: "6LcyAfwrAAAAAIW3a80PzlRFDWoBWrNk-ODh44sJ" }
+        {
+          sitekey: "6LcyAfwrAAAAAIW3a80PzlRFDWoBWrNk-ODh44sJ",
+          theme: "dark",
+        }
       );
     } else {
-      setTimeout(loadRecaptcha, 100);
+      setTimeout(waitForRecaptcha, 100);
     }
   };
-  loadRecaptcha();
+  waitForRecaptcha();
 });
 
 async function submitForm() {
