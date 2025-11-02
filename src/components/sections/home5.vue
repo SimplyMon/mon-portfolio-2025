@@ -1,37 +1,34 @@
 <template>
-  <section class="bg-gray-900 text-[#D7EAD9] py-28">
+  <section class="bg-gray-900 text-[#E8F5E9] py-28">
     <div class="max-w-5xl mx-auto px-6 text-center">
-      <!-- Title -->
       <h2
         ref="titleRef"
         :class="[
-          'text-4xl md:text-5xl font-extrabold tracking-tight mb-8 transition-all duration-1000 ease-out',
+          'text-3xl md:text-5xl font-extrabold tracking-tight mb-8 md:mb-14 transition-all duration-1000 ease-out',
           isVisible.title
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-10',
         ]"
       >
-        Let’s Create Together
+        Let’s Create Your Next Digital Experience
       </h2>
 
-      <!-- Paragraph -->
       <p
         ref="paraRef"
         :class="[
-          'text-[#D7EAD9] text-lg md:text-xl leading-relaxed mb-6 transition-all duration-1000 ease-out delay-200',
+          'text-[#D7EAD9] text-lg md:text-xl leading-relaxed mb-10 transition-all duration-1000 ease-out delay-200',
           isVisible.para
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 translate-y-10',
         ]"
       >
-        I look forward to the possibility of collaborating with you in the
-        future. Thank you! <br /><br />
-        If you have any further questions, collaborations, or opportunities
-        you'd like to discuss, I would be delighted to connect with you. Please
-        feel free to reach out to me through the following platforms.
+        I’d love to collaborate and bring your ideas to life. Built with
+        clarity, purpose, and performance. <br /><br />
+        Together, we can create something that feels effortless yet
+        extraordinary. Designed for people who appreciate beauty and
+        performance. Let’s connect and build your next experience.
       </p>
 
-      <!-- Buttons -->
       <div
         ref="btnRef"
         :class="[
@@ -41,15 +38,21 @@
             : 'opacity-0 translate-y-10',
         ]"
       >
-        <div class="relative group cursor-pointer" @click="toggleTooltip">
-          <span
-            class="border border-gray-700 hover:border-[#FD6F00] hover:text-[#FD6F00] text-[#D7EAD9] font-semibold py-4 w-40 inline-block text-center rounded-xl transition-transform duration-300 hover:scale-105"
+        <!-- Email Button -->
+        <div class="relative">
+          <button
+            @click="toggleTooltip"
+            @keydown.enter.prevent="toggleTooltip"
+            @keydown.space.prevent="toggleTooltip"
+            aria-label="Click to reveal email"
+            class="bg-[#FD6F00] text-white font-semibold py-4 w-40 text-center rounded-xl transition-transform duration-300 hover:scale-105 focus-visible:outline-2 focus-visible:outline-[#FD6F00]"
           >
             Email Me
-          </span>
+          </button>
+
           <span
-            class="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-gray-800 text-[#D7EAD9] text-sm px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap"
-            :class="{ 'opacity-100': showTooltip }"
+            v-if="showTooltip"
+            class="absolute top-full mt-3 left-1/2 -translate-x-1/2 bg-gray-800 text-[#E8F5E9] text-sm px-3 py-2 rounded-lg shadow-lg whitespace-nowrap z-10 border border-gray-700"
           >
             mon.dev005@gmail.com
           </span>
@@ -58,7 +61,8 @@
         <a
           href="https://www.linkedin.com/in/simon-expression-pasag-85b1112b7/"
           target="_blank"
-          class="border border-gray-700 hover:border-[#FD6F00] hover:text-[#FD6F00] text-[#D7EAD9] font-semibold py-4 w-40 text-center rounded-xl transition-transform duration-300 hover:scale-105"
+          aria-label="Visit LinkedIn Profile"
+          class="border border-gray-700 hover:border-[#FD6F00] hover:text-[#FD6F00] text-[#E8F5E9] font-semibold py-4 w-40 text-center rounded-xl transition-transform duration-300 hover:scale-105 focus-visible:outline-2 focus-visible:outline-[#FD6F00]"
         >
           LinkedIn
         </a>
@@ -66,7 +70,8 @@
         <a
           href="https://github.com/SimplyMon"
           target="_blank"
-          class="border border-gray-700 hover:border-[#FD6F00] hover:text-[#FD6F00] text-[#D7EAD9] font-semibold py-4 w-40 text-center rounded-xl transition-transform duration-300 hover:scale-105"
+          aria-label="Visit GitHub Profile"
+          class="border border-gray-700 hover:border-[#FD6F00] hover:text-[#FD6F00] text-[#E8F5E9] font-semibold py-4 w-40 text-center rounded-xl transition-transform duration-300 hover:scale-105 focus-visible:outline-2 focus-visible:outline-[#FD6F00]"
         >
           GitHub
         </a>
@@ -76,19 +81,27 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const showTooltip = ref(false);
 
 function toggleTooltip() {
   showTooltip.value = !showTooltip.value;
+}
 
-  if (showTooltip.value) {
-    setTimeout(() => {
-      showTooltip.value = false;
-    }, 2000);
+function handleClickOutside(e) {
+  if (!e.target.closest("button")) {
+    showTooltip.value = false;
   }
 }
+
+onMounted(() => {
+  document.addEventListener("click", handleClickOutside);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener("click", handleClickOutside);
+});
 
 // --- Scroll animation setup ---
 const isVisible = ref({ title: false, para: false, btn: false });
