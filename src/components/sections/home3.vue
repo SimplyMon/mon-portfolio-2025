@@ -37,6 +37,7 @@
           v-for="(project, index) in projects"
           :key="index"
           ref="projectRefs"
+          class="project-card"
           :class="[
             'hover:scale-105 transform transition duration-300',
             'transition-all duration-1000 ease-out',
@@ -46,7 +47,6 @@
             `delay-[${index * 150}ms]`,
           ]"
         >
-          <!-- Image wrapper -->
           <div
             class="relative group rounded-lg overflow-hidden cursor-pointer"
             @click="toggleOverlay(index)"
@@ -77,6 +77,7 @@
                 :href="project.livePreview"
                 target="_blank"
                 class="bg-white/80 text-black px-4 py-2 rounded-md font-medium hover:bg-gray-200 transition"
+                @click.stop
               >
                 Live Preview
               </a>
@@ -153,7 +154,6 @@ const projects = [
   },
 ];
 
-// Animation visibility states
 const isVisible = ref({
   title: false,
   desc: false,
@@ -183,6 +183,12 @@ onMounted(() => {
   if (descRef.value) observer.observe(descRef.value);
   projectRefs.value.forEach((el) => {
     if (el) observer.observe(el);
+  });
+
+  window.addEventListener("click", (e) => {
+    if (!e.target.closest(".project-card")) {
+      activeProject.value = null;
+    }
   });
 });
 </script>
