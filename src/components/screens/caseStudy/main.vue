@@ -3,7 +3,6 @@
     class="bg-[#0D0D0D] text-[#D7EAD9] py-20 px-6 pt-24 md:pt-48 md:pb-60 overflow-hidden"
   >
     <div class="max-w-5xl mx-auto text-center">
-      <!-- Section Title -->
       <transition
         appear
         enter-active-class="transition duration-[1200ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]"
@@ -20,7 +19,6 @@
         </div>
       </transition>
 
-      <!-- Projects -->
       <TransitionGroup
         tag="div"
         class="flex flex-wrap justify-center gap-8 mt-12"
@@ -32,11 +30,10 @@
         <div
           v-for="(project, index) in projects"
           :key="project.title"
-          class="relative group overflow-hidden rounded-2xl shadow-lg w-80 cursor-pointer"
-          @click="project.status === 'up' ? toggleOverlay(index) : null"
+          class="project-card relative group overflow-hidden rounded-2xl shadow-lg w-80 cursor-pointer"
+          @click="toggleOverlay(index)"
           :style="{ transitionDelay: `${index * 200}ms` }"
         >
-          <!-- DOT -->
           <span
             v-if="project.status"
             class="absolute top-4 right-6 w-3 h-3 rounded-full"
@@ -49,7 +46,6 @@
             class="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
           />
 
-          <!-- Overlay -->
           <div
             class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
             :class="{ 'opacity-100': activeIndex === index }"
@@ -113,4 +109,10 @@ const activeIndex = ref(null);
 function toggleOverlay(index) {
   activeIndex.value = activeIndex.value === index ? null : index;
 }
+
+window.addEventListener("click", (e) => {
+  if (!e.target.closest(".project-card")) {
+    activeIndex.value = null;
+  }
+});
 </script>

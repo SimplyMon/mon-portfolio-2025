@@ -18,7 +18,6 @@
 
   <transition name="fade-slide" appear>
     <div v-if="showContent">
-      <!-- Hero Section -->
       <section
         class="bg-[#0D0D0D] text-[#D7EAD9] px-6 py-24 md:py-0 min-h-screen flex items-center justify-center"
       >
@@ -202,39 +201,50 @@ import home3 from "../sections/home3.vue";
 import home4 from "../sections/home4.vue";
 import home5 from "../sections/home5.vue";
 
+const heroImage = new URL("../../assets/images/hero3.png", import.meta.url)
+  .href;
+
+if (!window.__animationPlayed) window.__animationPlayed = false;
+
+const videoEnded = ref(window.__animationPlayed);
+const showContent = ref(window.__animationPlayed);
 const imageLoaded = ref(false);
 const textLoaded = ref(false);
 const showScrollTop = ref(false);
-const showContent = ref(false);
-const videoEnded = ref(false);
-
-const heroImage = new URL("../../assets/images/hero3.png", import.meta.url)
-  .href;
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
 function handleScroll() {
   showScrollTop.value = window.scrollY > 300;
 }
 
-onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
-});
-onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
-});
-
 function onVideoEnd() {
   videoEnded.value = true;
   showContent.value = true;
+  window.__animationPlayed = true;
 
   const img = new Image();
   img.src = heroImage;
   img.onload = () => (imageLoaded.value = true);
-
   setTimeout(() => (textLoaded.value = true), 300);
 }
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+
+  if (window.__animationPlayed) {
+    const img = new Image();
+    img.src = heroImage;
+    img.onload = () => (imageLoaded.value = true);
+    setTimeout(() => (textLoaded.value = true), 300);
+  }
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <style scoped>
