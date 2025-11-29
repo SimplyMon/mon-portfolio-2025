@@ -101,6 +101,7 @@ import lamesaPos from "@/assets/images/projects/lamesaPos.png";
 import lamesaWeb from "@/assets/images/projects/lamesaWeb.png";
 import bozriahPos from "@/assets/images/projects/bozriahPos.png";
 import bozriahKiosk from "@/assets/images/projects/bozriahKiosk.png";
+import chirpy from "@/assets/images/projects/chirpy.svg";
 import ascendCare from "@/assets/images/projects/ascendcare.png";
 
 const activeProject = ref(null);
@@ -122,6 +123,12 @@ const projects = [
     image: diverseWeb,
     caseStudy: "/case-study/diverse-oral-core",
     livePreview: "https://diverseoralcore.vercel.app/",
+  },
+  {
+    title: "Chirpy Find",
+    category: "Discover the Wonders of Birds around the World",
+    image: chirpy,
+    livePreview: "https://chirpyfind.vercel.app/",
   },
   {
     title: "Ascend Care",
