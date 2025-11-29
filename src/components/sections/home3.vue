@@ -126,7 +126,7 @@ const projects = [
   },
   {
     title: "Chirpy Find",
-    category: "Discover the Wonders of Birds around the World",
+    category: "Discover Birds around the World",
     image: chirpy,
     livePreview: "https://chirpyfind.vercel.app/",
   },
