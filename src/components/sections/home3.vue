@@ -134,7 +134,6 @@ const projects = [
     category: "Lamesa Website",
     image: lamesaWeb,
     caseStudy: "/case-study/lamesa-inasal",
-    livePreview: "https://lamesa.infinityfreeapp.com/WEB/index.php",
   },
   {
     title: "Lamesa Inasal POS System",
