@@ -100,34 +100,34 @@ import postgresqlLogo from "@/assets/images/tech/postgresql-plain-wordmark.png";
 import mongodbLogo from "@/assets/images/tech/mongodb-plain-wordmark.png";
 
 const languages = [
-  phpLogo,
-  cppLogo,
-  javaLogo,
-  pythonLogo,
   typescriptLogo,
   jsLogo,
   htmlLogo,
   cssLogo,
+  phpLogo,
+  cppLogo,
+  javaLogo,
+  pythonLogo,
 ];
 const frameworks = [
   vueLogo,
   reactLogo,
   nextLogo,
-  bootstrapLogo,
-  tailwindLogo,
   nodejsLogo,
   expressjsLogo,
   laravelLogo,
+  bootstrapLogo,
+  tailwindLogo,
 ];
 const tools = [
-  vscodeLogo,
+  dockerLogo,
   githubLogo,
   gitLogo,
   npmLogo,
+  vscodeLogo,
+  wordpressLogo,
   figmaLogo,
   photoshopLogo,
-  wordpressLogo,
-  dockerLogo,
 ];
 const databases = [
   firebaseLogo,
