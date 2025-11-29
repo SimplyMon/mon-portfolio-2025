@@ -76,7 +76,7 @@ import cssLogo from "@/assets/images/tech/css3-plain.png";
 
 import vueLogo from "@/assets/images/tech/vuejs-original.png";
 import reactLogo from "@/assets/images/tech/react-original.png";
-import jqueryLogo from "@/assets/images/tech/jquery-original.png";
+import nextLogo from "@/assets/images/tech/next.svg";
 import bootstrapLogo from "@/assets/images/tech/bootstrap-original.png";
 import tailwindLogo from "@/assets/images/tech/tailwindcss-plain.png";
 import nodejsLogo from "@/assets/images/tech/nodejs-original-wordmark.png";
@@ -112,7 +112,7 @@ const languages = [
 const frameworks = [
   vueLogo,
   reactLogo,
-  jqueryLogo,
+  nextLogo,
   bootstrapLogo,
   tailwindLogo,
   nodejsLogo,
