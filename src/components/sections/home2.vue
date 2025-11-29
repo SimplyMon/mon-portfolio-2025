@@ -104,10 +104,10 @@ const languages = [
   jsLogo,
   htmlLogo,
   cssLogo,
-  phpLogo,
   cppLogo,
-  javaLogo,
+  phpLogo,
   pythonLogo,
+  javaLogo,
 ];
 const frameworks = [
   vueLogo,
