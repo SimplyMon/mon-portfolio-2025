@@ -74,8 +74,8 @@ const testimonials = [
   {
     feedback:
       "Working with Simon was smooth and professional. He built our project fast and exceeded expectations.",
-    name: "Kamal, Hussain",
-    role: "Owner, Lamesa Inasal Restaurant",
+    name: "Val, Smith",
+    role: "Restaurant Owner",
   },
   {
     feedback:
@@ -86,7 +86,7 @@ const testimonials = [
   {
     feedback:
       "A reliable developer who communicates well and delivers on time. Our website runs flawlessly.",
-    name: "Pagaturo, Cath",
+    name: "Miller, David",
     role: "QA Engineer",
   },
 ];
@@ -120,7 +120,7 @@ onMounted(() => {
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.2 },
   );
 
   if (titleRef.value) observer.observe(titleRef.value);
