@@ -141,6 +141,7 @@ const projects = [
     category: "Lamesa Website",
     image: lamesaWeb,
     caseStudy: "/case-study/lamesa-inasal",
+    livePreview: "https://lacocinainasal.vercel.app/",
   },
   {
     title: "Lamesa Inasal POS System",
@@ -182,7 +183,7 @@ onMounted(() => {
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.2 },
   );
 
   if (titleRef.value) observer.observe(titleRef.value);
