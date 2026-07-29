@@ -1,34 +1,37 @@
 <template>
   <section class="bg-[#0D0D0D] text-[#D7EAD9] px-6 py-32 border-t-2">
     <div class="max-w-5xl mx-auto text-center">
-      <h2
-        ref="titleRef"
-        :class="[
-          'text-3xl md:text-4xl font-bold transition-all duration-1000 ease-out',
-          isVisible.title
-            ? 'opacity-100 translate-y-0'
-            : 'opacity-0 translate-y-10',
-        ]"
-      >
-        My Projects
-      </h2>
+      <div class="group inline-block">
+        <h2
+          ref="titleRef"
+          :class="[
+            'text-3xl md:text-4xl font-bold cursor-pointer transition-all duration-1000 ease-out',
+            isVisible.title
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-10',
+          ]"
+        >
+          My Projects
+        </h2>
 
-      <p
-        ref="descRef"
-        :class="[
-          'relative text-[#A6B9A8] mt-2 inline-block cursor-pointer transition-all duration-1000 ease-out delay-300',
-          isVisible.desc
-            ? 'opacity-100 translate-y-0'
-            : 'opacity-0 translate-y-10',
-        ]"
-      >
-        Tap or click the
-        <span class="text-[#FD6F00]"> picture </span>
-        to view projects
-        <span
-          class="absolute left-1/2 -translate-x-1/2 -bottom-2 w-32 h-1 bg-[#FD6F00] rounded transition-all duration-500 group-hover:w-full"
-        ></span>
-      </p>
+        <p
+          ref="descRef"
+          :class="[
+            'text-[#A6B9A8] mt-3 max-w-xl mx-auto transition-all duration-1000 ease-out delay-300',
+            isVisible.desc
+              ? 'opacity-100 translate-y-0'
+              : 'opacity-0 translate-y-10',
+          ]"
+        >
+          Tap or click the
+          <span class="text-[#FD6F00]">picture</span>
+          to view projects
+        </p>
+
+        <div
+          class="w-20 h-1 bg-[#FD6F00] rounded mx-auto mt-5 transition-all duration-500 group-hover:w-full"
+        ></div>
+      </div>
 
       <div
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12 lg:mt-16"
@@ -102,6 +105,7 @@ import lamesaWeb from "@/assets/images/projects/lamesaWeb.png";
 import bozriahPos from "@/assets/images/projects/bozriahPos.png";
 import bozriahKiosk from "@/assets/images/projects/bozriahKiosk.png";
 import chirpy from "@/assets/images/projects/chirpy.svg";
+import linkconasia from "@/assets/images/projects/linkconasia.png";
 import ascendCare from "@/assets/images/projects/ascendcare.png";
 
 const activeProject = ref(null);
@@ -111,19 +115,26 @@ const toggleOverlay = (index) => {
 
 const projects = [
   {
-    title: "Guardian Lock",
-    category: "Web based Smart Door Application",
-    image: guardianLock,
-    caseStudy: "/case-study/guardian-lock",
-    livePreview: "https://guardian-lock.vercel.app/",
+    title: "LinkconAsia",
+    category: "Guided Business trips & sourcing to China",
+    image: linkconasia,
+    livePreview: "https://www.linkconasia.com/",
+  },
+
+  {
+    title: "Lamesa Inasal Website",
+    category: "Lamesa Website",
+    image: lamesaWeb,
+    caseStudy: "/case-study/lamesa-inasal",
+    livePreview: "https://lacocinainasal.vercel.app/",
   },
   {
-    title: "Diverse Oral Core",
-    category: "Dental Clinic Platform",
-    image: diverseWeb,
-    caseStudy: "/case-study/diverse-oral-core",
-    livePreview: "https://diverseoralcore.vercel.app/",
+    title: "Lamesa Inasal POS System",
+    category: "Web based Point Of Sale System",
+    image: lamesaPos,
+    caseStudy: "/case-study/lamesa-inasal",
   },
+
   {
     title: "Chirpy Find",
     category: "Discover Birds around the World",
@@ -137,17 +148,18 @@ const projects = [
     livePreview: "https://ascendcare.vercel.app/",
   },
   {
-    title: "Lamesa Inasal Website",
-    category: "Lamesa Website",
-    image: lamesaWeb,
-    caseStudy: "/case-study/lamesa-inasal",
-    livePreview: "https://lacocinainasal.vercel.app/",
+    title: "Guardian Lock",
+    category: "Web based Smart Door Application",
+    image: guardianLock,
+    caseStudy: "/case-study/guardian-lock",
+    livePreview: "https://guardian-lock.vercel.app/",
   },
   {
-    title: "Lamesa Inasal POS System",
-    category: "Web based Point Of Sale System",
-    image: lamesaPos,
-    caseStudy: "/case-study/lamesa-inasal",
+    title: "Diverse Oral Core",
+    category: "Dental Clinic Platform",
+    image: diverseWeb,
+    caseStudy: "/case-study/diverse-oral-core",
+    livePreview: "https://diverseoralcore.vercel.app/",
   },
   {
     title: "Bozriah POS",
