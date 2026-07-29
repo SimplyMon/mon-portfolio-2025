@@ -16,7 +16,7 @@
         <h2
           ref="titleRef"
           :class="[
-            'text-3xl md:text-4xl font-bold mb-2 cursor-pointer transition-all duration-1000 ease-out',
+            'text-3xl md:text-4xl font-bold cursor-pointer transition-all duration-1000 ease-out',
             isVisible.title
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-10',
@@ -24,8 +24,11 @@
         >
           Tech Stack
         </h2>
+        <p class="text-[#A6B9A8] mt-3 max-w-xl mx-auto">
+          The languages, frameworks, databases, and tools I build with.
+        </p>
         <div
-          class="w-20 h-1 bg-[#FD6F00] rounded mx-auto transition-all duration-500 group-hover:w-full"
+          class="w-20 h-1 bg-[#FD6F00] rounded mx-auto mt-5 transition-all duration-500 group-hover:w-full"
         ></div>
       </div>
 
