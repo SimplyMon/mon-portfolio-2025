@@ -16,7 +16,7 @@
         <h2
           ref="titleRef"
           :class="[
-            'text-3xl md:text-4xl font-bold mb-2 cursor-pointer transition-all duration-1000 ease-out',
+            'text-3xl md:text-4xl font-bold cursor-pointer transition-all duration-1000 ease-out',
             isVisible.title
               ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-10',
@@ -24,8 +24,11 @@
         >
           Tech Stack
         </h2>
+        <p class="text-[#A6B9A8] mt-3 max-w-xl mx-auto">
+          The languages, frameworks, databases, and tools I build with.
+        </p>
         <div
-          class="w-20 h-1 bg-[#FD6F00] rounded mx-auto transition-all duration-500 group-hover:w-full"
+          class="w-20 h-1 bg-[#FD6F00] rounded mx-auto mt-5 transition-all duration-500 group-hover:w-full"
         ></div>
       </div>
 
@@ -76,7 +79,7 @@ import cssLogo from "@/assets/images/tech/css3-plain.png";
 
 import vueLogo from "@/assets/images/tech/vuejs-original.png";
 import reactLogo from "@/assets/images/tech/react-original.png";
-import jqueryLogo from "@/assets/images/tech/jquery-original.png";
+import nextLogo from "@/assets/images/tech/next.svg";
 import bootstrapLogo from "@/assets/images/tech/bootstrap-original.png";
 import tailwindLogo from "@/assets/images/tech/tailwindcss-plain.png";
 import nodejsLogo from "@/assets/images/tech/nodejs-original-wordmark.png";
@@ -100,34 +103,34 @@ import postgresqlLogo from "@/assets/images/tech/postgresql-plain-wordmark.png";
 import mongodbLogo from "@/assets/images/tech/mongodb-plain-wordmark.png";
 
 const languages = [
-  phpLogo,
-  cppLogo,
-  javaLogo,
-  pythonLogo,
   typescriptLogo,
   jsLogo,
   htmlLogo,
   cssLogo,
+  cppLogo,
+  phpLogo,
+  pythonLogo,
+  javaLogo,
 ];
 const frameworks = [
   vueLogo,
   reactLogo,
-  jqueryLogo,
-  bootstrapLogo,
-  tailwindLogo,
+  nextLogo,
   nodejsLogo,
   expressjsLogo,
   laravelLogo,
+  bootstrapLogo,
+  tailwindLogo,
 ];
 const tools = [
-  vscodeLogo,
+  dockerLogo,
   githubLogo,
   gitLogo,
   npmLogo,
+  vscodeLogo,
+  wordpressLogo,
   figmaLogo,
   photoshopLogo,
-  wordpressLogo,
-  dockerLogo,
 ];
 const databases = [
   firebaseLogo,
