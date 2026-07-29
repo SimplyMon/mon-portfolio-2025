@@ -69,8 +69,12 @@
       <div
         class="mt-1 mb-14 md:mb-0 md:mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500"
       >
-        © 2025 Mon Dev. All rights reserved.
+        © {{ currentYear }} Mon Dev. All rights reserved.
       </div>
     </div>
   </footer>
 </template>
+
+<script setup>
+const currentYear = new Date().getFullYear();
+</script>
