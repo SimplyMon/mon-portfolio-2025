@@ -75,7 +75,22 @@
                     {{ job.period }}
                   </span>
                 </div>
-                <p class="text-[#A6B9A8] text-sm mt-1.5">{{ job.company }}</p>
+                <p class="text-[#A6B9A8] text-sm mt-1.5">
+                  <a
+                    v-if="job.url"
+                    :href="job.url"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 text-[#FD6F00]"
+                  >
+                    {{ job.company }}
+                    <i
+                      class="fas fa-arrow-up-right-from-square text-[0.65em]"
+                      aria-hidden="true"
+                    ></i>
+                  </a>
+                  <template v-else>{{ job.company }}</template>
+                </p>
 
                 <ul
                   class="mt-4 space-y-3 text-sm md:text-[15px] leading-relaxed text-gray-300"
@@ -222,6 +237,7 @@ const experience = [
   {
     role: "Jr. Web Developer",
     company: "Ensemble Digital Media",
+    url: "https://ensembledigitalmedia.com",
     period: "Dec 2025 – Present",
     current: true,
     points: [
@@ -234,6 +250,7 @@ const experience = [
   {
     role: "Full-Stack Developer",
     company: "eTaxpoint Software Solutions Corp.",
+    url: "https://www.etaxpoint.com.ph/",
     period: "Jan – Jun 2025",
     points: [
       "Built POS and kiosk features for customer-facing and staff applications, ensuring seamless user experiences.",
