@@ -241,7 +241,7 @@ const experience = [
     period: "Dec 2025 – Present",
     current: true,
     points: [
-      "Own the build and development of CRM systems for client businesses, from initial setup through ongoing feature work.",
+      "Responsible for the development of CRM systems for client businesses, from initial setup through ongoing feature work.",
       "Maintain server infrastructure and cPanel configuration across client hosting environments.",
       "Publish blogs and newsletters to existing clients and prospective leads.",
       "Collaborate with other departments on cross-functional projects and deliverables.",
@@ -253,7 +253,7 @@ const experience = [
     url: "https://www.etaxpoint.com.ph/",
     period: "Jan – Jun 2025",
     points: [
-      "Built POS and kiosk features for customer-facing and staff applications, ensuring seamless user experiences.",
+      "Responsible for building POS and kiosk features for customer-facing and staff applications, ensuring seamless user experiences.",
       "Designed and developed intuitive web UIs using modern frameworks, reducing booking complexity and errors.",
       "Gained practical experience in server-side development, focusing on scalability and performance.",
     ],
